@@ -63,7 +63,8 @@ export const remainingPaths = Object.keys(remainingRouter).map(v => {
 
 /** 创建路由实例 */
 export const router: Router = createRouter({
-  history: createWebHistory("/peanut-project/"),
+  // @ts-ignore
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: constantRoutes.concat(...(remainingRouter as any)),
   strict: true,
   scrollBehavior(to, from, savedPosition) {
