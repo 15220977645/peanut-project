@@ -1,0 +1,123 @@
+@charset "UTF-8";
+[data-v-6760b653] .empty-box {
+  align-items: center;
+  background-color: #006cff14;
+  display: flex;
+  height: calc(100% - 2.2917rem);
+  justify-content: center;
+}
+[data-v-6760b653] .el-carousel__container {
+  height: calc(100vh - 5.7292rem);
+}
+[data-v-6760b653] .el-carousel__indicators {
+  display: none;
+}
+[data-v-6760b653] .el-carousel__arrow {
+  background-color: #27688880;
+  color: #091231;
+  display: inline-block !important;
+  font-size: 1.5625rem;
+  height: 2.6042rem;
+  opacity: 1 !important;
+  transform: unset !important;
+  width: 2.6042rem;
+}
+[data-v-6760b653] .el-carousel__arrow i {
+  font-weight: bolder;
+}
+.screenData[data-v-6760b653] {
+  background-color: #030324;
+  background-image: url(http://images.visfarm.com/crm/img/bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  line-height: 1;
+  margin: 0 !important;
+  transform: translate(-1px);
+}
+.screenData .el-alert--error[data-v-6760b653] {
+  background-color: #0009;
+  color: #fff;
+  font-size: 0.8333rem;
+  left: 50%;
+  position: fixed;
+  top: 0;
+  transform: translate(-50%);
+  width: 27.0833rem;
+  z-index: 999;
+}
+.screenData .container[data-v-6760b653] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100% !important;
+}
+.screenData .container .head[data-v-6760b653] {
+  align-items: center;
+  background: linear-gradient(0deg, #002d5b, #010a25);
+  border: 1px solid #000;
+  box-shadow: 0 -0.3646rem 1.1979rem #19f5fe;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3021rem 0.7292rem 1.4583rem;
+  position: relative;
+  z-index: 1;
+}
+.screenData .container .head img[data-v-6760b653] {
+  height: 1.4063rem;
+  object-fit: contain;
+  width: 30%;
+}
+.screenData .container .head .title[data-v-6760b653] {
+  cursor: pointer;
+  font-family: pingfang sc;
+  font-size: 2.5521rem;
+  font-weight: 700;
+  height: 105%;
+  position: relative;
+  text-shadow: 0 0 0.3125rem #19f5fe;
+}
+.screenData .container .head .title[data-v-6760b653]:after {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(0deg, #19f5fe, #fff 80%);
+  content: "**投标部数据监控";
+  display: block;
+  height: 100%;
+  position: absolute;
+  text-shadow: none;
+  top: 0;
+  width: 100%;
+  -webkit-text-fill-color: #0000;
+}
+.screenData .container .content[data-v-6760b653] {
+  background-color: initial;
+  display: flex;
+  flex-wrap: nowrap;
+  height: calc(100vh - 5.3125rem);
+  padding: 1.5625rem 1.5625rem 1.0417rem;
+}
+.screenData .container .content > div[data-v-6760b653] {
+  display: flex;
+  flex-direction: column;
+}
+.screenData .container .content .l[data-v-6760b653] {
+  min-width: 63.5%;
+  width: 63.5%;
+}
+.screenData .container .content .r[data-v-6760b653] {
+  min-width: 36.5%;
+  width: 36.5%;
+}
+.screenData .container .content .r .notice-display[data-v-6760b653] {
+  height: calc(28% - 1.0417rem);
+  margin-bottom: 1.0417rem;
+}
+.screenData .container .content .r .canteen-info[data-v-6760b653] {
+  height: calc(36% - 1.0417rem);
+  margin-bottom: 1.0417rem;
+}
+.screenData .container .content .r .win-bid-info[data-v-6760b653] {
+  height: 36%;
+}

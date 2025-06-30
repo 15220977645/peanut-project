@@ -1,0 +1,74 @@
+.develop-block[data-v-4029edbd],
+.empty-box[data-v-4029edbd] {
+  background-color: #9cc4ff0f;
+}
+.develop-block[data-v-4029edbd] {
+  height: calc(100% - 1.6666rem);
+  overflow: hidden;
+  position: relative;
+}
+.develop-block .scroll-develop[data-v-4029edbd] {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  transition: all 0.3s linear 0s;
+}
+.develop-block .scroll-develop > div[data-v-4029edbd] {
+  padding-bottom: 5.2083rem;
+  position: relative;
+}
+.develop-block div[data-v-4029edbd],
+.develop-block img[data-v-4029edbd],
+.develop-block span[data-v-4029edbd] {
+  pointer-events: none;
+}
+.develop-block .develop-info[data-v-4029edbd] {
+  display: flex;
+  flex-direction: column;
+}
+.develop-block .develop-info .info-head[data-v-4029edbd] {
+  background-color: #4e6bff1a;
+  border-radius: 0.4167rem;
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.7292rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.7813rem;
+}
+.develop-block .develop-info .info-head .point[data-v-4029edbd] {
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.3646rem;
+  margin-right: 0.5208rem;
+  width: 0.3646rem;
+}
+.develop-block .develop-info .info-content[data-v-4029edbd] {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.625rem;
+  padding: 0 0.5208rem;
+}
+.develop-block .develop-info .info-content .imgs[data-v-4029edbd] {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.develop-block .develop-info .info-content .imgs img[data-v-4029edbd] {
+  height: auto;
+  margin-bottom: 1%;
+  width: 24.25%;
+}
+.develop-block
+  .develop-info
+  .info-content
+  .imgs
+  img[data-v-4029edbd]:not(:nth-child(4n)) {
+  margin-right: 1%;
+}
+.develop-block .develop-info .info-content .rich-text[data-v-4029edbd] {
+  color: #7e92bc;
+}

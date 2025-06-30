@@ -1,0 +1,51 @@
+[data-v-0ba69609] .el-tabs__content {
+  padding: 0;
+}
+[data-v-0ba69609] .el-textarea__inner {
+  max-height: 500px !important;
+  min-height: 100px !important;
+}
+.container[data-v-0ba69609] {
+  margin: 15px;
+  max-width: calc(100% - 30px);
+}
+.container .btn[data-v-0ba69609] {
+  display: flex;
+  flex-direction: column;
+}
+.container .btn .el-button[data-v-0ba69609] {
+  width: 4.1667rem;
+}
+.container .btn .tip[data-v-0ba69609] {
+  color: gray;
+  font-size: 0.8333rem;
+  margin-top: 15px;
+  padding-left: 8px;
+  position: relative;
+}
+.container .btn .tip[data-v-0ba69609]:before {
+  color: red;
+  content: "*";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.container .edit[data-v-0ba69609] {
+  background-color: #fff;
+  padding: 15px;
+}
+.container .edit-block[data-v-0ba69609] {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 0.7813rem;
+}
+.container .edit-block > div[data-v-0ba69609] {
+  width: 50%;
+}
+.container .edit-block .date-result[data-v-0ba69609] {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-left: 0.7813rem;
+}

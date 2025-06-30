@@ -9,14 +9,14 @@ import {
   Router,
   createRouter,
   RouteRecordRaw,
-  RouteComponent
+  RouteComponent,
+  createWebHistory
 } from "vue-router";
 import {
   ascending,
   getTopMenu,
   initRouter,
   isOneOfArray,
-  getHistoryMode,
   findRouteByPath,
   handleAliveRoute,
   formatTwoStageRoutes,
@@ -31,6 +31,7 @@ import remainingRouter from "./modules/remaining";
  * 如何匹配所有文件请看：https://github.com/mrmlnc/fast-glob#basic-syntax
  * 如何排除文件请看：https://cn.vitejs.dev/guide/features.html#negative-patterns
  */
+// @ts-ignore
 const modules: Record<string, any> = import.meta.glob(
   ["./modules/**/*.ts", "!./modules/**/remaining.ts"],
   {
@@ -62,7 +63,7 @@ export const remainingPaths = Object.keys(remainingRouter).map(v => {
 
 /** 创建路由实例 */
 export const router: Router = createRouter({
-  history: getHistoryMode(import.meta.env.VITE_ROUTER_HISTORY),
+  history: createWebHistory("/peanut-project/"),
   routes: constantRoutes.concat(...(remainingRouter as any)),
   strict: true,
   scrollBehavior(to, from, savedPosition) {
@@ -98,7 +99,7 @@ export function resetRouter() {
 
 /** 路由白名单 */
 const whiteList = ["/login"];
-
+// @ts-ignore
 const { VITE_HIDE_HOME } = import.meta.env;
 
 router.beforeEach((to: toRouteType, _from, next) => {

@@ -1,0 +1,11 @@
+import { _ as t, r as s, c as a, o, t as c, u as n } from "./index-DuV_pBtV.js";
+const r = { class: "container" },
+  _ = {
+    __name: "index",
+    setup(i) {
+      const e = s("敬请期待");
+      return (p, d) => (o(), a("div", r, c(n(e)), 1));
+    }
+  },
+  l = t(_, [["__scopeId", "data-v-f19633e9"]]);
+export { l as default };

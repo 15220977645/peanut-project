@@ -1,0 +1,31 @@
+[data-v-20332956] .child-attributes-table .el-select {
+  padding: 5px 0;
+}
+[data-v-20332956] .child-attributes-table .cell {
+  padding: 0 5px;
+}
+[data-v-20332956] .child-control .el-button {
+  border: none;
+  font-size: 13px;
+  margin-left: 0;
+  margin-right: 5px;
+  padding: 5px;
+}
+[data-v-20332956] .child-control .el-button:hover {
+  background-color: #4a79e4;
+  color: #fff;
+}
+[data-v-20332956] .child-control .el-button--danger {
+  background-color: #fff;
+  border-color: #dcdfe6;
+  color: #606266;
+}
+[data-v-20332956] .child-control .el-button--danger:hover {
+  background-color: #f56c6c;
+}
+[data-v-20332956] .is-center .cell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center !important;
+}

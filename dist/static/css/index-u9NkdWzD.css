@@ -1,0 +1,14 @@
+.three-container[data-v-85f925d4] {
+  height: calc(100% - 30px);
+  margin: 15px;
+  position: relative;
+}
+.three-container .play-btn[data-v-85f925d4] {
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+}
+.three-container .three-box[data-v-85f925d4] {
+  height: 100%;
+  width: 100%;
+}

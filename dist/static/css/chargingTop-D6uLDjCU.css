@@ -1,0 +1,16 @@
+[data-v-ce68620d] .title-container {
+  pointer-events: none;
+}
+.charging-top-container[data-v-ce68620d] {
+  cursor: pointer;
+}
+.loading[data-v-ce68620d],
+.scroll-charging[data-v-ce68620d] {
+  flex: 1;
+  overflow: hidden;
+}
+.charging-rank[data-v-ce68620d] {
+  flex: 1;
+  margin: 0 0.8333rem 0.8333rem;
+  overflow: auto;
+}

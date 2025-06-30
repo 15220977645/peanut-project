@@ -1,0 +1,56 @@
+[data-v-6a6584e2] h1 {
+  line-height: 2rem;
+}
+.notice-block[data-v-6a6584e2] {
+  background-color: #006cff14;
+  height: calc(100% - 2.2917rem);
+  line-height: 1.2rem;
+  overflow: hidden;
+  padding: 0 1.3021rem;
+  position: relative;
+}
+.notice-block .scroll-notice[data-v-6a6584e2] {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  transition: all 0.3s linear 0s;
+}
+.notice-block .scroll-notice > div[data-v-6a6584e2] {
+  padding-bottom: 5.2083rem;
+  position: relative;
+}
+.notice-block div[data-v-6a6584e2],
+.notice-block img[data-v-6a6584e2],
+.notice-block span[data-v-6a6584e2] {
+  pointer-events: none;
+}
+.notice-block .notice-info[data-v-6a6584e2] {
+  display: flex;
+  flex-direction: column;
+}
+.notice-block .notice-info .info-content[data-v-6a6584e2] {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7292rem;
+}
+.notice-block .notice-info .info-content .imgs[data-v-6a6584e2] {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.notice-block .notice-info .info-content .imgs img[data-v-6a6584e2] {
+  height: auto;
+  margin-bottom: 1%;
+  width: 24.25%;
+}
+.notice-block
+  .notice-info
+  .info-content
+  .imgs
+  img[data-v-6a6584e2]:not(:nth-child(4n)) {
+  margin-right: 1%;
+}
+.notice-block .notice-info .info-content .rich-text[data-v-6a6584e2] {
+  color: #fff;
+}

@@ -1,0 +1,125 @@
+import { _ } from "./empty-Bw1MhoKL.js";
+import { V as f } from "./vue3-seamless-scroll.es-DDt7u6Rw.js";
+import {
+  d as N,
+  r as d,
+  c as r,
+  a as l,
+  i as v,
+  t as s,
+  u as t,
+  g as k,
+  w as b,
+  F as w,
+  k as x,
+  a4 as V,
+  o as n,
+  _ as g
+} from "./index-DuV_pBtV.js";
+const h = { class: "warn-container" },
+  y = { class: "module-head" },
+  B = { class: "warn-table" },
+  D = { key: 1, class: "empty-box" },
+  F = N({
+    __name: "warnInfo",
+    setup(I) {
+      const o = d([]),
+        m = d(25),
+        i = d(!0);
+      function c() {
+        let u = 0;
+        for (; u < m.value; )
+          o.value.push({
+            unitName: "*******有限公司",
+            trackingNumber: `YD${(Math.random() * 1e4).toFixed(0)}-${(
+              Math.random() * 1e8
+            ).toFixed(0)}`,
+            cusName: "****供应商",
+            carNo: "粤X88888",
+            driverName: "张三"
+          }),
+            u++;
+      }
+      return (
+        c(),
+        (u, a) => (
+          n(),
+          r("div", h, [
+            l("div", y, [
+              a[1] || (a[1] = v(" 当前预警信息")),
+              l("span", null, "（" + s(t(m)) + "条）", 1)
+            ]),
+            l("div", B, [
+              a[3] ||
+                (a[3] = l(
+                  "ul",
+                  { class: "table-header" },
+                  [
+                    l("li", null, "组织"),
+                    l("li", null, "运单"),
+                    l("li", null, "客户"),
+                    l("li", null, "车辆"),
+                    l("li", null, "司机")
+                  ],
+                  -1
+                )),
+              t(o)[0]
+                ? (n(),
+                  k(
+                    t(f),
+                    {
+                      key: 0,
+                      modelValue: t(i),
+                      "onUpdate:modelValue":
+                        a[0] || (a[0] = e => (V(i) ? (i.value = e) : null)),
+                      class: "warp table-block",
+                      list: t(o),
+                      hover: "",
+                      limitScrollNum: 20,
+                      step: 0.3
+                    },
+                    {
+                      default: b(() => [
+                        (n(!0),
+                        r(
+                          w,
+                          null,
+                          x(
+                            t(o),
+                            (e, p) => (
+                              n(),
+                              r("ul", { key: p, class: "table-info" }, [
+                                l("li", null, s(e.unitName), 1),
+                                l("li", null, s(e.trackingNumber), 1),
+                                l("li", null, s(e.cusName), 1),
+                                l("li", null, s(e.carNo), 1),
+                                l("li", null, s(e.driverName), 1)
+                              ])
+                            )
+                          ),
+                          128
+                        ))
+                      ]),
+                      _: 1
+                    },
+                    8,
+                    ["modelValue", "list"]
+                  ))
+                : (n(),
+                  r(
+                    "div",
+                    D,
+                    a[2] ||
+                      (a[2] = [
+                        l("img", { src: _, alt: "" }, null, -1),
+                        l("span", null, "暂无数据", -1)
+                      ])
+                  ))
+            ])
+          ])
+        )
+      );
+    }
+  }),
+  U = g(F, [["__scopeId", "data-v-999536db"]]);
+export { U as default };

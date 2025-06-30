@@ -1,0 +1,108 @@
+import f from "./logisticsSignage-DjF9xway.js";
+import g from "./map-C0aVjbKl.js";
+import F from "./warnInfo-CDRVYEzp.js";
+import { _ as R } from "./deliveryOverview.vue_vue_type_script_setup_true_lang-bQeTS8O_.js";
+import V from "./logisticsFacts-D1d_ly6B.js";
+import {
+  d as x,
+  r as a,
+  c as i,
+  a as s,
+  b as A,
+  F as Z,
+  k as b,
+  u as t,
+  o as l,
+  t as r,
+  _ as X
+} from "./index-DuV_pBtV.js";
+import "./empty-Bw1MhoKL.js";
+import "./vue3-seamless-scroll.es-DDt7u6Rw.js";
+import "./OverView-CnxzdJep.js";
+import "./requireImg-CLyBMj04.js";
+import "./index-TK4OleqK.js";
+const z =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAoCAYAAAC4h3lxAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAKAAAAACLp7BPAAAEzklEQVRYCe2ZX4hUVRzHv+fe3dZNrVaCwpZIKqiUdjcRgyB6UrQ/q1QP0YugK4iUD4WwkCkVRPrSn6VIH4oKLKFslaToQUghXYXd9Q8JhltJ1kNjW/7J3Jl7+pw7c2+3nZm9M+s048MeuXvO/Z3fv+/v/M7vnDsaNbjZYbUHVl/KyvDvAO4c9Hz6eTpujHJp7pk0hv97HgCP5QL1j7eD8xes1WH6A56nreZenRrP494bD4DI545oJSuwBGcW4vQt4x0FxCm/U7ePp9cEgB3UbWpVxtylc6UMVEuzQ1oUSP0AmRbJAuwXv0uzo/dk7yVfqhljoDk3pHdJ0pHgkn60R7SkGvlSvARjGc5/mnTe8VnpUCl+R5sUAHtUN+WGtRdDq50S+rYgp925Qa1179U25A2ymwKjzxjPcPKkzflID+PaASDS83H2MGF5IDLgeqLk8/ThyOs4UXFg7AnNZCV3IrvRAXG6cPiEZ7TCjV1DWW0AZAf1dBBoP4banWIMXeZ5huHX7t01HFnH6vTb4/lI5qml/8JzR/BXWDq7Yw6j3d50LaQyzYxpLQSsTKsoUjjsE9kt6PiIcbi5cPxXyttDVIc+nqXG07bYhtUjwZj2sSGLKkrEw9xieA4B+B5HQ5/lecXvULe5U3+yFAsK9BFztzKR3Pg+FQAp00ZE92Do+VjYaMCbpvnU5m8LRrIYXo3R9c4RRwNoJwfUAHX+vliuMCAY69mse+C5wZGQOY8jjxOIDbG81FlgL5s+bn5CAERpLvk+gEuLCsqcsff96XqQsnkmokU9pW4LCp8AyEVHA8lsQHzjDqvw/bRayfft0F/D+dA2vN8zuN90amekx/XYOeZ6z2q768s15Es3It9Nvn+IoTAXYcxi8jki/WZpiX+p9pgWBFntQvZmR8WZgO35Eoi6oXXFnEZf+Z6eYiV/j2mFAXxsZc2aKH0caxEAJxgMawNzm0IleaYMVeFJorTXCVXS2KC3kuNfoGNeKX5AbfY61BuCK8VQIe0/AFzlyI3pAyK1PJKHYZglXma69ENEq7S3J3Vd7oJ2oG9xJIO+i9bTyqYOfRzRatKTp3PIz6OUShs9vH9iz+jaKzHACjRRBDazcUfR9x2nbbQ5r0RtsWx2SPsTjucw2lvMVZ6yZtS2lZ+tfKZaPWElcOpZ2tZC/wf1/VE266uVmu35zb4zltXZnoydsGKk6ZuMnngPuEOH2rzca9YuM1c/pRlLzmP4HKVxBlGw3iy1bDVmLDlf6Xgyepoi5VSYnxn3Re9V9s0hPxWsJeVsSdFbtZ44hSZSbK2NV2oivkbMpQIgr1/uOatLqzL2jUY4mGYzFQAKnqWOX0O/lpMtTrk0xfWaTwdgRVrTuJFyJfTr5VildtIBVKqpQXx1A8BeWsdzmlL5Qi2x1g0A54S7HLZzVmzcYW3NUrFuAIzNn/TubrRPqlkxqBuAWqZNUtcUgGQ0GjGeWoFGRD1pc2oFktFoxHhqBRoR9aTN+ENl1aidw7dw/uaZ4OC3neHCdVq+r04uAX8npsNhvXj8QJffvl4jxnCuF1oIgEvWexzxKyLi1dzj8OfbbjTx71bhHsD5h69mp5O+8XG7NPmJG16q+Gn8RdKkFyBFKZQUbviY/4/gNvtWMoX+Aa1WxxuIk79bAAAAAElFTkSuQmCC",
+  C = { class: "tms-screen-container" },
+  K = { class: "left" },
+  k = { class: "tip-data" },
+  U = { class: "tip" },
+  _ = { class: "tip-label" },
+  N = { class: "tip-value" },
+  Q = { class: "middle" },
+  j = { class: "right" },
+  B = x({
+    __name: "index",
+    setup(L) {
+      const o = a([
+          { label: "今日配送点", value: 0 },
+          { label: "今日预警总数", value: 0 }
+        ]),
+        p = a(["#FB497C", "#FFC760", "#6FE621", "#4FCCFF", "#8B77FF"]),
+        m = a([]),
+        e = a({ orders: [], whGroup: {}, customerGroup: {} });
+      function u() {
+        d();
+      }
+      function d() {
+        (e.value = []),
+          (o.value[0].value = 50),
+          (o.value[1].value = 30),
+          (e.warnMessages = [
+            {
+              unitName: "",
+              trackingNumber: "",
+              cusName: "",
+              carNo: "",
+              driverName: ""
+            }
+          ]);
+      }
+      return (
+        u(),
+        (D, n) => (
+          l(),
+          i("div", C, [
+            s("div", K, [
+              s("div", k, [
+                (l(!0),
+                i(
+                  Z,
+                  null,
+                  b(
+                    t(o),
+                    (c, v) => (
+                      l(),
+                      i("div", { key: v, class: "item-tip" }, [
+                        n[0] ||
+                          (n[0] = s("img", { src: z, alt: "" }, null, -1)),
+                        s("div", U, [
+                          s("div", _, r(c.label), 1),
+                          s("div", N, r(c.value), 1)
+                        ])
+                      ])
+                    )
+                  ),
+                  128
+                ))
+              ]),
+              A(f, { list: t(e).orders, class: "signage" }, null, 8, ["list"])
+            ]),
+            s("div", Q, [
+              A(g, { class: "map", colorList: t(p), lineList: t(m) }, null, 8, [
+                "colorList",
+                "lineList"
+              ]),
+              A(F, { class: "warn-info" })
+            ]),
+            s("div", j, [
+              A(R, { data: t(e), class: "overview" }, null, 8, ["data"]),
+              A(V, { class: "facts" })
+            ])
+          ])
+        )
+      );
+    }
+  }),
+  q = X(B, [["__scopeId", "data-v-5e61af1f"]]);
+export { q as default };

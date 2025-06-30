@@ -1,0 +1,105 @@
+import { useColumns as h } from "./columns-DppjPhDj.js";
+import {
+  d as k,
+  r,
+  g as y,
+  h as l,
+  u as e,
+  a4 as R,
+  w as c,
+  a as V,
+  b as i,
+  i as v,
+  o as S
+} from "./index-DuV_pBtV.js";
+const w = { class: "w-[600px] m-4" },
+  P = k({
+    __name: "index",
+    setup(T) {
+      const n = r(),
+        s = r(),
+        {
+          columns: p,
+          pagination: o,
+          selectValue: t,
+          tableDataEdit: u,
+          onClear: m,
+          onSure: d,
+          removeTag: _,
+          handleSelectionChange: f
+        } = h(n, s);
+      return (z, a) => {
+        const g = l("pure-table"),
+          b = l("el-button"),
+          C = l("el-select");
+        return (
+          S(),
+          y(
+            C,
+            {
+              class: "w-[160px]",
+              ref_key: "selectRef",
+              ref: n,
+              modelValue: e(t),
+              "onUpdate:modelValue":
+                a[0] || (a[0] = x => (R(t) ? (t.value = x) : null)),
+              placeholder: "请选择",
+              clearable: "",
+              multiple: "",
+              "collapse-tags": "",
+              "collapse-tags-tooltip": "",
+              onRemoveTag: e(_),
+              onClear: e(m)
+            },
+            {
+              empty: c(() => [
+                V("div", w, [
+                  i(
+                    g,
+                    {
+                      ref_key: "tableRef",
+                      ref: s,
+                      height: "355",
+                      "row-key": "id",
+                      "header-cell-style": {
+                        background: "#f5f7fa",
+                        color: "#303133"
+                      },
+                      data: e(u).slice(
+                        (e(o).currentPage - 1) * e(o).pageSize,
+                        e(o).currentPage * e(o).pageSize
+                      ),
+                      columns: e(p),
+                      pagination: e(o),
+                      onSelectionChange: e(f)
+                    },
+                    null,
+                    8,
+                    ["data", "columns", "pagination", "onSelectionChange"]
+                  ),
+                  i(
+                    b,
+                    {
+                      class: "absolute bottom-[17px]",
+                      type: "primary",
+                      size: "small",
+                      text: "",
+                      bg: "",
+                      onClick: e(d)
+                    },
+                    { default: c(() => a[1] || (a[1] = [v(" 确定 ")])), _: 1 },
+                    8,
+                    ["onClick"]
+                  )
+                ])
+              ]),
+              _: 1
+            },
+            8,
+            ["modelValue", "onRemoveTag", "onClear"]
+          )
+        );
+      };
+    }
+  });
+export { P as _ };

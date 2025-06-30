@@ -1,0 +1,83 @@
+[data-v-c4c5480c] .el-loading-mask {
+  background-color: initial;
+}
+[data-v-c4c5480c] .echart-tootip {
+  font-size: 0.7292rem;
+  line-height: 0.5208rem;
+  padding: 0.2604rem;
+}
+[data-v-c4c5480c] .echart-tootip div {
+  padding: 0.2604rem;
+}
+[data-v-c4c5480c] .echart-tootip div span {
+  display: inline-block;
+  margin-right: 0.0521rem;
+  text-align-last: justify;
+  width: 4.4792rem;
+}
+.chinaMap[data-v-c4c5480c] {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  margin-bottom: 1.5625rem;
+  position: relative;
+}
+.chinaMap .distribution[data-v-c4c5480c] {
+  background-color: #212964;
+  border-radius: 0.4167rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  left: 0;
+  position: absolute;
+  width: 9.1rem;
+  z-index: 1;
+}
+.chinaMap .distribution .branch-office[data-v-c4c5480c] {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.625rem;
+  padding: 0.7813rem;
+}
+.chinaMap .distribution .branch-office img[data-v-c4c5480c] {
+  height: 0.9375rem;
+  margin-right: 0.2604rem;
+  pointer-events: none;
+  width: 0.9375rem;
+}
+.chinaMap .distribution .branch-office[data-v-c4c5480c]:first-child {
+  border-radius: 0.4167rem 0.4167rem 0 0;
+}
+.chinaMap .distribution .branch-office[data-v-c4c5480c]:last-child {
+  border-radius: 0 0 0.4167rem 0.4167rem;
+}
+.chinaMap .distribution .active[data-v-c4c5480c] {
+  background-color: #2f3e91;
+}
+.chinaMap .back-map-btn[data-v-c4c5480c] {
+  background-color: #182554;
+  border: 0.0521rem solid #4266de;
+  border-radius: 0.2604rem;
+  color: #4266de;
+  cursor: pointer;
+  font-size: 0.625rem;
+  left: 0;
+  padding: 0.3125rem;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+  z-index: 1;
+}
+.chinaMap .china[data-v-c4c5480c] {
+  width: 40.1042rem;
+}
+.chinaMap .islands[data-v-c4c5480c] {
+  bottom: 3%;
+  left: calc(80% + 5vh);
+  position: absolute;
+  width: 3.2813rem;
+}

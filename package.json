@@ -1,8 +1,10 @@
 {
   "name": "vue-pure-admin",
   "version": "4.2.0",
+  "homepage": "https://15220977645.github.io/peanut-project",
   "private": true,
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "NODE_OPTIONS=--max-old-space-size=4096 vite",
     "serve": "pnpm dev",
     "build": "rimraf dist && NODE_OPTIONS=--max-old-space-size=8192 vite build",
@@ -52,6 +54,7 @@
     "el-table-infinite-scroll": "^3.0.1",
     "element-plus": "^2.3.4",
     "element-resize-detector": "^1.2.4",
+    "gh-pages": "^6.3.0",
     "intro.js": "^7.0.1",
     "js-cookie": "^3.0.5",
     "jsbarcode": "^3.11.5",

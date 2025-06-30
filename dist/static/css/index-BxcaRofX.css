@@ -1,0 +1,133 @@
+[data-v-37a31d03] .empty-box {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 1.6666rem);
+  justify-content: center;
+}
+.screenData[data-v-37a31d03] {
+  background-color: #0d0c1b;
+  background-image: url(/peanut-project/static/jpg/bg-qVq19NMw.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  line-height: 1;
+  margin: 0 !important;
+  position: relative;
+}
+.screenData .el-alert--error[data-v-37a31d03] {
+  background-color: #0009;
+  color: #fff;
+  font-size: 0.8333rem;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%);
+  width: 27.0833rem;
+  z-index: 999;
+}
+.screenData .container[data-v-37a31d03] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100% !important;
+  padding: 0 2.0833rem 1.5625rem;
+}
+.screenData .container .title-box[data-v-37a31d03] {
+  width: 100%;
+}
+.screenData .container .title-box header[data-v-37a31d03] {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+.screenData .container .title-box header > div[data-v-37a31d03] {
+  width: 33.33%;
+}
+.screenData .container .title-box header .lehe-logo[data-v-37a31d03] {
+  margin-top: 3.5156rem;
+}
+.screenData .container .title-box header .lehe-logo img[data-v-37a31d03] {
+  width: 6.25rem;
+}
+.screenData .container .title-box header .title[data-v-37a31d03] {
+  background: linear-gradient(2deg, #92b8ffd4, #e8feff 55.957%, #accfffd4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #0000;
+  cursor: pointer;
+  font-family: pingfang sc;
+  font-size: 2.8646rem;
+  font-weight: 700;
+  margin-top: 1.5625rem;
+  text-align: center;
+}
+.screenData .container .title-box header .dateTime[data-v-37a31d03] {
+  color: #fff;
+  font-size: 0.8333rem;
+  margin-top: 2.6042rem;
+  opacity: 0.8;
+  text-align: right;
+}
+.screenData .container .content-box[data-v-37a31d03] {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 4rem);
+  justify-content: space-between;
+  padding-top: 4rem;
+}
+.screenData .container .content-box .left[data-v-37a31d03],
+.screenData .container .content-box .middle[data-v-37a31d03],
+.screenData .container .content-box .right[data-v-37a31d03] {
+  display: flex;
+  flex-direction: column;
+}
+.screenData .container .content-box .left[data-v-37a31d03] {
+  flex-basis: 25%;
+  min-width: 25%;
+  padding-bottom: 1.5625rem;
+  width: 25%;
+}
+.screenData .container .content-box .left .full-screen[data-v-37a31d03] {
+  height: 30%;
+}
+.screenData .container .content-box .left .full-safe[data-v-37a31d03] {
+  height: 40.5%;
+  padding: 0.5208rem 0;
+}
+.screenData .container .content-box .left .develop-info[data-v-37a31d03] {
+  height: 29.5%;
+}
+.screenData .container .content-box .middle[data-v-37a31d03] {
+  box-sizing: border-box;
+  flex-basis: 48%;
+  min-width: 48%;
+  padding-left: 3rem;
+  width: 48%;
+}
+.screenData .container .content-box .right[data-v-37a31d03] {
+  flex-basis: 27%;
+  min-width: 27%;
+  padding-bottom: 1.5625rem;
+  width: 27%;
+}
+.screenData
+  .container
+  .content-box
+  .right
+  .index-local-supplier[data-v-37a31d03] {
+  height: 30%;
+}
+.screenData
+  .container
+  .content-box
+  .right
+  .index-trophic-pyramid[data-v-37a31d03] {
+  height: 40.5%;
+  padding: 0.5208rem 0;
+}
+.screenData .container .content-box .right .logistics-map[data-v-37a31d03] {
+  height: 29.5%;
+}
