@@ -21,7 +21,7 @@ menus:
   hsempty: 无Layout页
   hseditor: 编辑器(旧)
   threeTemplate: Three模板
-  IntegratedTraining: 综合训练
+  integratedTraining: 综合训练
   environmentMap: 环境贴图
   pipelineRoamingCase: 管道漫游案例
   solid: 立体图形

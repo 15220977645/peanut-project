@@ -20,7 +20,7 @@ menus:
   hslogin: Login
   hsempty: Empty Page
   hseditor: Editor(old)
-  IntegratedTraining: Integrated Training
+  integratedTraining: Integrated Training
   pipelineRoamingCase: Pipeline Roaming Case
   threeTemplate: Three Template
   comingSoon: Coming Soon

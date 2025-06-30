@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as s,t as o}from"./index-kTNr7WD4.js";const c={class:"title-container"},n={__name:"title",props:{name:{type:String,default:""}},setup(t){return(r,_)=>(s(),a("div",c,o(t.name),1))}},l=e(n,[["__scopeId","data-v-d3a1831d"]]);export{l as default};
