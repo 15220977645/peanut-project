@@ -1,0 +1,105 @@
+.month-popover {
+  background: linear-gradient(0deg, #002d5b, #010a25) !important;
+  border: none !important;
+  border-radius: 0.3125rem !important;
+  box-shadow: 0 0 1.3021rem #2877b1 !important;
+  padding: 1.0417rem !important;
+  width: 13.0208rem !important;
+}
+.month-popover .el-popper__arrow {
+  display: none;
+}
+.month-popover .triangle-icon {
+  border-bottom: 0.5208rem solid #010a25;
+  border-left: 0.7813rem solid #0000;
+  border-right: 0.7813rem solid #0000;
+  height: 0;
+  left: 2.6042rem;
+  position: absolute;
+  top: -0.5208rem;
+  width: 0;
+}
+.month-popover .select-content-box .month-block {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: pingfangsc-semibold;
+  font-size: 0.8854rem;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 1.3021rem;
+}
+.month-popover .select-content-box .month-block .cursor {
+  cursor: pointer;
+}
+.month-popover .month-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.month-popover .month-list .month-item {
+  margin: 0.5208rem 0;
+  width: 33.33%;
+}
+.month-popover .month-list .month-item > div {
+  padding: 0.2604rem;
+}
+.month-popover .month-list .month-item .item-block {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 1.875rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.month-popover .month-list .item-content {
+  background-color: #092843;
+}
+.month-popover .month-list .item-content .item-block {
+  color: #19f5fe !important;
+}
+.month-popover .month-list .item-start {
+  border-bottom-left-radius: 0.9375rem;
+  border-top-left-radius: 0.9375rem;
+}
+.month-popover .month-list .item-end {
+  border-bottom-right-radius: 0.9375rem;
+  border-top-right-radius: 0.9375rem;
+}
+.month-popover .month-list .item-active {
+  background-color: #1c5f70;
+  border-radius: 0.9375rem;
+  color: #19f5fe !important;
+}
+.month-popover .month-list .no-active_item {
+  pointer-events: none;
+}
+.month-popover .month-list .no-active_item > div {
+  color: #fff3 !important;
+}
+.month-input[data-v-258d9995] {
+  align-items: center;
+  color: #19f5fe;
+  cursor: pointer;
+  display: flex;
+  font-family: pingfang sc;
+  font-size: 1.3542rem;
+  font-weight: 500;
+  height: 2.2917rem;
+  letter-spacing: 0.0521rem;
+  padding-left: 1.3021rem;
+  position: relative;
+  width: fit-content;
+  width: 18.2292rem;
+}
+.month-input > div[data-v-258d9995] {
+  min-width: fit-content;
+  z-index: 1;
+}
+.month-input .choice-icon[data-v-258d9995] {
+  color: #19f5fe;
+  font-size: 1.3542rem;
+  margin-left: 0.2604rem;
+  z-index: 1;
+}

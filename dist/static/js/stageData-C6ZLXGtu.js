@@ -1,0 +1,128 @@
+import d from "./monthDate-tPZLirrk.js";
+import { B as _ } from "./bus-CK4wyhbn.js";
+import {
+  _ as v,
+  r as m,
+  c as r,
+  o as u,
+  a as i,
+  b as h,
+  F as p,
+  k as b,
+  y as g,
+  t as c
+} from "./index-D6DS3gmo.js";
+const x = { class: "bid-data-container" },
+  D = { class: "month-box" },
+  L = { class: "data-box" },
+  T = { class: "data-item" },
+  f = { class: "item-title" },
+  w = { class: "item-num" },
+  y = {
+    __name: "stageData",
+    setup(B) {
+      const o = m([]),
+        t = m([
+          {
+            show: !0,
+            title: "年中标金额(亿)",
+            num: 10,
+            ratioList: [{ title: "年环比", val: "50%" }]
+          },
+          {
+            show: !0,
+            title: "年中标率",
+            num: 60,
+            ratioList: [{ title: "年环比", val: "30%" }]
+          },
+          {
+            show: !0,
+            title: "月中标金额(亿)",
+            num: 10,
+            ratioList: [
+              { title: "月环比", val: "50%" },
+              { title: "月同比", val: "30%" }
+            ]
+          },
+          {
+            show: !0,
+            title: "月中标率",
+            num: 60,
+            ratioList: [
+              { title: "月环比", val: "50%" },
+              { title: "月同比", val: "30%" }
+            ]
+          }
+        ]);
+      return (
+        _.on("getStageDataTime", a => {
+          let l = "月中标金额(亿)",
+            e = "月中标率",
+            s = "月环比",
+            n = "月同比";
+          a.useData.startTime !== a.useData.endTime &&
+            ((o.value = `${Number(a.useData.startTime.split("-")[1])}-${Number(
+              a.useData.endTime.split("-")[1]
+            )}月`),
+            (l = `${o.value}中标金额(亿)`),
+            (e = `${o.value}中标率`),
+            (s = "季环比"),
+            (n = "季同比")),
+            (t.value[2].title = l),
+            (t.value[3].title = e),
+            (t.value[2].ratioList[0].title = s),
+            (t.value[3].ratioList[0].title = s),
+            (t.value[2].ratioList[1].title = n),
+            (t.value[3].ratioList[1].title = n);
+        }),
+        (a, l) => (
+          u(),
+          r("div", x, [
+            i("div", D, [
+              h(
+                d,
+                {
+                  ref: "monthDate",
+                  "bus-name": "getStageDataTime",
+                  "choice-type": "monthRange",
+                  class: "month-range"
+                },
+                null,
+                512
+              )
+            ]),
+            i("div", L, [
+              (u(!0),
+              r(
+                p,
+                null,
+                b(
+                  t.value,
+                  (e, s) => (
+                    u(),
+                    r(
+                      "div",
+                      {
+                        key: s,
+                        class: g([{ "empty-box": !e.show }, "item-box"])
+                      },
+                      [
+                        i("div", T, [
+                          i("div", f, c(e.title), 1),
+                          i("div", w, c(e.num), 1)
+                        ])
+                      ],
+                      2
+                    )
+                  )
+                ),
+                128
+              ))
+            ])
+          ])
+        )
+      );
+    }
+  },
+  S = v(y, [["__scopeId", "data-v-2dc8deb1"]]);
+export { S as default };

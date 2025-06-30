@@ -1,0 +1,1 @@
+import{_ as e,r as s,c as a,o,t as c,u as n}from"./index-kTNr7WD4.js";const r={class:"container"},_={__name:"index",setup(i){const t=s("敬请期待");return(p,d)=>(o(),a("div",r,c(n(t)),1))}},l=e(_,[["__scopeId","data-v-2d35004a"]]);export{l as default};

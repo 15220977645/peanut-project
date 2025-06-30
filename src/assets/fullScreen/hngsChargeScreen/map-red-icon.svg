@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#229;&#133;&#133;&#231;&#148;&#181;&#231;&#171;&#153;">
+<path id="Star 1" d="M25.9724 2.26742L33.94 6.78346L41.8348 11.4256C43.0471 12.1384 43.796 13.4355 43.8072 14.8419L43.88 24L43.8072 33.1581C43.796 34.5645 43.0471 35.8616 41.8348 36.5744L33.9399 41.2166L25.9724 45.7326C24.7489 46.4261 23.2511 46.4261 22.0276 45.7326L14.06 41.2165L6.16523 36.5744C4.95291 35.8616 4.20401 34.5645 4.19283 33.1581L4.12003 24L4.19283 14.8419C4.20401 13.4355 4.95291 12.1384 6.16523 11.4256L14.06 6.78345L22.0276 2.26742C23.2511 1.57394 24.7489 1.57394 25.9724 2.26742Z" fill="url(#paint0_linear_6003_37203)" stroke="white" stroke-width="2"/>
+<g id="&#231;&#148;&#181;&#231;&#171;&#153;&#229;&#136;&#151;&#232;&#161;&#168;">
+<path id="Rectangle 1075" d="M30.5454 21.3867V21.3867C31.3929 21.3867 32.0799 22.0737 32.0799 22.9212V32.128H30.5454V21.3867Z" fill="white" fill-opacity="0.3"/>
+<g id="Rectangle 1076" filter="url(#filter0_i_6003_37203)">
+<rect x="15.5845" y="32.1289" width="18.4136" height="1.53447" rx="0.767233" fill="white"/>
+</g>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M21.5024 13.7148C19.2933 13.7148 17.5024 15.5057 17.5024 17.7148V32.1284H30.5454V17.7148C30.5454 15.5057 28.7545 13.7148 26.5454 13.7148H21.5024ZM27.4764 22.8346H24.7535L25.4049 17.9355L20.5713 24.545H23.2941L22.6428 29.444L27.4764 22.8346Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_6003_37203" x="15.5845" y="32.1289" width="18.4136" height="1.53516" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_6003_37203"/>
+</filter>
+<linearGradient id="paint0_linear_6003_37203" x1="41" y1="12.5" x2="6" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ec5959"/>
+<stop offset="1" stop-color="#f08b78"/>
+</linearGradient>
+</defs>
+</svg>

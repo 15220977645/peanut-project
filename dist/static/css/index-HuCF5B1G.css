@@ -1,0 +1,24 @@
+.container[data-v-1840db34] {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  height: calc(100vh - 116px);
+  margin: 15px;
+  max-width: unset !important;
+  width: calc(100% - 30px);
+}
+.container .content-left[data-v-1840db34] {
+  flex: 0 0 13.0208rem;
+  min-width: 250px;
+  overflow: auto;
+}
+.container .content-main[data-v-1840db34] {
+  border-left: 0.0521rem solid #e0e0e0;
+  border-right: 0.0521rem solid #e0e0e0;
+  flex: 1;
+}
+.container .content-right[data-v-1840db34] {
+  flex: 0 0 15.625rem;
+  min-width: 300px;
+  overflow: auto;
+}

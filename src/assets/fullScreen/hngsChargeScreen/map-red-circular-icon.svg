@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>map2-red-icon</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#EB5A5A" offset="0%"></stop>
+            <stop stop-color="#F08A78" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map2-red-icon">
+            <circle id="椭圆形" stroke="#FFFFFF" fill="url(#linearGradient-1)" cx="24" cy="24" r="23.5"></circle>
+            <g id="编组" transform="translate(15, 14)" fill="#FFFFFF">
+                <path d="M14.9609,7.6719 L14.9609,7.6719 C15.8084,7.6719 16.4954,8.3589 16.4954,9.2064 L16.4954,18.4132 L14.9609,18.4132 L14.9609,7.6719 Z" id="Rectangle-1075" fill-opacity="0.3" fill-rule="nonzero"></path>
+                <rect id="矩形" fill-rule="nonzero" x="0" y="18" width="18.4136" height="1.53447" rx="0.767233"></rect>
+                <path d="M6,0 C3.7909,0 2,1.7909 2,4 L2,18.4136 L15.043,18.4136 L15.043,4 C15.043,1.7909 13.2521,0 11.043,0 L6,0 Z M11.974,9.1198 L9.2511,9.1198 L9.9025,4.2207 L5.0689,10.8302 L7.7917,10.8302 L7.1404,15.7292 L11.974,9.1198 Z" id="Subtract"></path>
+            </g>
+        </g>
+    </g>
+</svg>

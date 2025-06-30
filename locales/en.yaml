@@ -1,0 +1,100 @@
+buttons:
+  hsLoginOut: LoginOut
+  hsfullscreen: FullScreen
+  hsexitfullscreen: ExitFullscreen
+  hsrefreshRoute: RefreshRoute
+  hslogin: Login
+  hssystemSet: Open ProjectConfig
+  hsreload: Reload
+  hscloseCurrentTab: Close CurrentTab
+  hscloseLeftTabs: Close LeftTabs
+  hscloseRightTabs: Close RightTabs
+  hscloseOtherTabs: Close OtherTabs
+  hscloseAllTabs: Close AllTabs
+  hswholeFullScreen: FullScreen
+  hswholeExitFullScreen: ExitFull
+  hscontentFullScreen: Content FullScreen
+  hscontentExitFullScreen: Content ExitFullScreen
+menus:
+  hshome: Home
+  hslogin: Login
+  hsempty: Empty Page
+  hseditor: Editor(old)
+  IntegratedTraining: Integrated Training
+  pipelineRoamingCase: Pipeline Roaming Case
+  threeTemplate: Three Template
+  comingSoon: Coming Soon
+  environmentMap: Environment Map
+  solid: solid
+  DIYForm: DIY Form
+  gltfDemo: Gltf Demo
+  createForm: Create Form
+  newComponents: Components(new)
+  upgradeVue: Upgrade Vue3
+  hscomponents: Components(old)
+  hsdraggable: Draggable Components
+  hssplitPane: Split Pane
+  hscropping: Picture Cropping
+  hscountTo: Digital Animation
+  hsseamless: Seamless Scroll
+  hscontextmenu: Context Menu
+  hstypeit: Typeit Components
+  hsjsoneditor: JSON Editor
+  hsAble: Able(old)
+  hsWatermark: Water Mark
+  hsPrint: Print
+  hsAbout: About
+  hsBarcode: Barcode
+  hsQrcode: Qrcode
+  hsVirtualList: Virtual List
+  hsExecl: Export Excel
+  hsInfiniteScroll: Table Infinite Scroll
+  hsdanmaku: Danmaku Components
+  hsPureTableHigh: Advanced Tables
+  fullScreen: large screen show
+  foodFullScreen: food large screen
+  tmsScreen: logistics screen
+  crmFullScreen: crm large screen
+  hngsChargeScreen: hngs charge screen
+status:
+  hsLoad: Loading...
+login:
+  username: Username
+  password: Password
+  verifyCode: VerifyCode
+  remember: Remember Password
+  sure: Sure Password
+  forget: Forget Password?
+  login: Login
+  touristsEnter: Tourists entering
+  phoneLogin: Phone Login
+  qRCodeLogin: QRCode Login
+  register: Register
+  weChatLogin: WeChat Login
+  alipayLogin: Alipay Login
+  qqLogin: QQ Login
+  weiboLogin: Weibo Login
+  phone: Phone
+  smsVerifyCode: SMS VerifyCode
+  back: Back
+  test: Mock Test
+  tip: After scanning the code, click "Confirm" to complete the login
+  definite: Definite
+  loginSuccess: Login Success
+  registerSuccess: Regist Success
+  tickPrivacy: Please tick Privacy Policy
+  readAccept: I have read it carefully and accept
+  privacyPolicy: Privacy Policy
+  getVerifyCode: Get VerifyCode
+  info: Seconds
+  usernameReg: Please enter username
+  passwordReg: Please enter password
+  verifyCodeReg: Please enter verify code
+  verifyCodeCorrectReg: Please enter correct verify code
+  verifyCodeSixReg: Please enter a 6-digit verify code
+  phoneReg: Please enter the phone
+  phoneCorrectReg: Please enter the correct phone number format
+  passwordRuleReg: The password format should be any combination of 8-18 digits
+  passwordSureReg: Please enter confirm password
+  passwordDifferentReg: The two passwords do not match!
+  passwordUpdateReg: Password has been updated

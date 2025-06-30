@@ -1,0 +1,80 @@
+/* 该注释方式编译后会保留 */
+// 该注释方式编译后不会保留
+
+/*                % + @extend: 不可传值，性能相对高               */
+
+// 文本省略号
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// img标签百分百适配容器
+%img-fit {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// 绝对居中定位
+%center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(-50%, -50%);
+}
+
+// 适配居中背景
+%bg-config {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: contain;
+  }
+}
+
+/*                @mixin + @include: 可传值，性能相对低               */
+
+// 最大高度滚动
+@mixin max-height-scroll($max-height: unset, $overflow-y: hidden) {
+  max-height: $max-height;
+  overflow-y: $overflow-y;
+}
+
+// 最大宽度度滚动
+@mixin max-width-scroll($max-width: unset, $overflow-x: hidden) {
+  max-width: $max-width;
+  overflow-x: $overflow-x;
+}
+
+// 字体
+@mixin font($size: 16px, $family: unset, $weight: 400) {
+  font: {
+    size: $size;
+    family: $family;
+    weight: $weight;
+  }
+}
+
+// 是否换行-flex
+@mixin wrap-flex($wrap: unset, $justify-content: unset, $align-items: unset) {
+  display: flex;
+  flex-wrap: $wrap;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// 排列方式-flex
+@mixin direction-flex(
+  $flex-direction: unset,
+  $justify-content: unset,
+  $align-items: unset
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

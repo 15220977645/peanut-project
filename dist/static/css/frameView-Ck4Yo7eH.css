@@ -1,0 +1,14 @@
+.frame[data-v-3128e9ec] {
+  height: calc(100vh - 88px);
+  z-index: 998;
+}
+.frame .frame-iframe[data-v-3128e9ec] {
+  border: 0;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.main-content[data-v-3128e9ec] {
+  margin: 2px 0 0 !important;
+}

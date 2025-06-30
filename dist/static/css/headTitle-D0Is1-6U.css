@@ -1,0 +1,55 @@
+.subTitle[data-v-5fb387b5] {
+  align-items: center;
+  color: #afe0fe;
+  display: flex;
+  font-size: 0.8333rem;
+  font-weight: 500;
+  justify-content: space-between;
+  margin-bottom: 0.8333rem;
+}
+.subTitle.mb[data-v-5fb387b5] {
+  margin-bottom: 0;
+}
+.subTitle .left[data-v-5fb387b5] {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.subTitle .left[data-v-5fb387b5]:after {
+  background-image: url(/peanut-project/static/png/title-light-CY5GjcSa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  left: -3.75rem;
+  padding-bottom: 5.5rem;
+  pointer-events: none;
+  position: absolute;
+  top: -1.5625rem;
+  width: 15.6875rem;
+  z-index: -1;
+}
+.subTitle .left .icon[data-v-5fb387b5] {
+  height: 0.9375rem;
+  margin-right: 0.5208rem;
+  width: 0.9375rem;
+}
+.subTitle .more[data-v-5fb387b5] {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.625rem;
+}
+.subTitle .more span[data-v-5fb387b5] {
+  color: #aec9ff;
+  margin-right: 0.5208rem;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.subTitle .more img[data-v-5fb387b5] {
+  height: 0.5208rem;
+}
+.subTitle .more:hover span[data-v-5fb387b5] {
+  opacity: 1;
+}

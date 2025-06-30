@@ -1,0 +1,158 @@
+import { f as y } from "./formConfig-jyKkspzO.js";
+function o(d) {
+  if (!Array.isArray(d)) return;
+  const a = [];
+  return (
+    d.forEach(n => {
+      const u = { key: n.key, vModel: n.vModel, type: n.type };
+      n.attribute.forEach(i => {
+        u[i.vModel] = i[i.vModel] || i.value;
+      }),
+        n.key === 13 && (u.fields = o(n.fields)),
+        a.push(u);
+    }),
+    a
+  );
+}
+function t(d) {
+  if (!Array.isArray(d)) return;
+  const a = [];
+  return (
+    d.forEach(n => {
+      const u = JSON.parse(
+        JSON.stringify(y.formDomConfig.find(e => e.key === n.key))
+      );
+      if (!u) return;
+      (u.vModel = n.vModel), (u.value = [5, 8, 9].includes(u.key) ? [] : "");
+      const i = [];
+      u.itemProp.forEach(e => {
+        const f = JSON.parse(
+          JSON.stringify(y.propItemData.find(l => l.key === e))
+        );
+        f && ((f.value = n[f.vModel]), (f[f.vModel] = n[f.vModel]), i.push(f));
+      }),
+        (u.attribute = i),
+        n.key === 13 && ((u.fields = t(n.fields)), (u.value = t(n.fields))),
+        a.push(u);
+    }),
+    a
+  );
+}
+function v(d) {
+  if (!Array.isArray(d)) return;
+  let a = null;
+  const n = {},
+    u = [];
+  return (
+    (a = d.map(i => {
+      if (i.attribute && i.attribute[0]) {
+        const e = {};
+        (e.key = i.key),
+          (e.name = i.vModel),
+          (e.vModel = i.vModel),
+          (e.domData = { ...i }),
+          delete e.domData.itemProp,
+          delete e.domData.attribute;
+        const f = [0, 1, 2].includes(i.key) ? "请输入" : "请选择";
+        return (
+          (e.label = i.attribute[0].label || i.attribute[0].value),
+          (e.value = i.value),
+          (n[i.vModel] = i.value),
+          i.attribute.forEach(l => {
+            const s = l[l.vModel] || l.value;
+            if (l.key === 1) e.placeholder = l.placeholder;
+            else if (l.key === 2) (e.defaultVale = s), (n[i.vModel] = s);
+            else if ([3, 23].includes(l.key)) {
+              if (((e[l.vModel] = !!s), l.key === 3)) {
+                const c = {
+                  required: !0,
+                  message: `${f}${e.label}`,
+                  trigger: "change"
+                };
+                e.required && (e.rules = [c]);
+              }
+            } else if (l.key === 4 && s) {
+              const c = {
+                pattern: new RegExp(s),
+                message: `请输入正确的${e.label}`,
+                trigger: "change"
+              };
+              e.rules.push(c);
+            } else
+              l.key === 5 && s
+                ? (e.decimalPlaces = Number(s))
+                : l.key === 6 && s
+                ? (e.inputParams = { ...l })
+                : l.key === 7
+                ? (e.dateType = s ? "datetime" : "date")
+                : l.key === 8
+                ? (e.lineClass = s)
+                : l.key === 9 && s
+                ? ((e.parentSelect = s), u.push({ parent: s, child: i.vModel }))
+                : l.key === 10
+                ? (e.option = s)
+                : l.key === 11 && s
+                ? (e.processDeploy = s)
+                : l.key === 12
+                ? (e.rowWidth = s === 0 ? "100%" : "50%")
+                : l.key === 13 && s
+                ? (e.isCompany = s)
+                : l.key === 14 && s
+                ? ((e.parentSubject = s),
+                  u.push({ parent: s, child: i.vModel }))
+                : l.key === 15 && s
+                ? (e.invoiceVModel = s)
+                : [15, 16, 17, 18].includes(l.key) && s
+                ? (e[l.vModel] = s)
+                : l.key === 19
+                ? ((e.fields = t(l.value)),
+                  (e.value = t(l.value)),
+                  (e.rowWidth = "100%"),
+                  (n[i.vModel] = []))
+                : ([20, 21, 22].includes(l.key) && s) || [23].includes(l.key)
+                ? (e[l.vModel] = s)
+                : [24].includes(l.key)
+                ? (e.minNum = ["", void 0, null].includes(s)
+                    ? -9999999
+                    : Number(s))
+                : [25].includes(l.key) &&
+                  (e.maxNum = ["", void 0, null].includes(s)
+                    ? 9999999
+                    : Number(s));
+          }),
+          e
+        );
+      }
+    })),
+    { formAttribute: a, formData: n, selLevelData: u }
+  );
+}
+function r(d) {
+  if (d === 0) return "￥零元整";
+  let a = "仟佰拾亿仟佰拾万仟佰拾元角分厘",
+    n = "";
+  d += "000";
+  const u = d.indexOf(".");
+  u >= 0 && (d = d.substring(0, u) + d.substr(u + 1, 3)),
+    (a = a.substring(a.length - d.length));
+  for (let i = 0; i < d.length; i++)
+    n += "零壹贰叁肆伍陆柒捌玖".charAt(d.charAt(i)) + a.charAt(i);
+  return (
+    "￥" +
+    n
+      .replace(/零(仟|佰|拾|角|分)/g, "零")
+      .replace(/(零)+/g, "零")
+      .replace(/零(万|亿|元)/g, "$1")
+      .replace(/(亿)万|壹(拾)/g, "$1$2")
+      .replace(/^元零?|零分/g, "")
+      .replace(/^分零?|零厘/g, "")
+      .replace(/元$/g, "元整")
+  );
+}
+const h = {
+  handleFormResult: o,
+  handleFormConfig: v,
+  handleRespForm: t,
+  arabicNumeralsTurnCn: r
+};
+export { h };

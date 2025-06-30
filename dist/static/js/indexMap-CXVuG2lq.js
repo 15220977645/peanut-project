@@ -1,0 +1,31 @@
+import a from "./headTitle-DRjBlJXx.js";
+import { _ as c, c as s, o, b as i, bx as e } from "./index-D6DS3gmo.js";
+import "./requireImg-CLyBMj04.js";
+const n = "/peanut-project/static/png/ylyCatInfo1-w_26LlaD.png",
+  p = "/peanut-project/static/png/ylyCatInfo2-Bm86uPvL.png",
+  d = "/peanut-project/static/png/ylyCatInfo3-Cd7ERVcN.png",
+  r = { class: "box" },
+  l = {
+    __name: "indexMap",
+    setup(_) {
+      return (v, t) => (
+        o(),
+        s("div", r, [
+          i(a, { icon: "LogisticsMap-icon.svg", name: "易流云车辆信息看板" }),
+          t[0] ||
+            (t[0] = e(
+              '<div class="info-block" data-v-c7c98636><div class="yl-info-img" data-v-c7c98636><img src="' +
+                n +
+                '" alt="" data-v-c7c98636><div class="right-img" data-v-c7c98636><img src="' +
+                p +
+                '" alt="" data-v-c7c98636><img src="' +
+                d +
+                '" alt="" data-v-c7c98636></div></div><div class="toYlPage" data-v-c7c98636>点击图片查看不同详情</div></div>',
+              1
+            ))
+        ])
+      );
+    }
+  },
+  u = c(l, [["__scopeId", "data-v-c7c98636"]]);
+export { u as default };

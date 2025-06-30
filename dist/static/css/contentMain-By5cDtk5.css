@@ -1,0 +1,66 @@
+[data-v-8059b395] .preview-drawer {
+  width: 80vw !important;
+}
+[data-v-8059b395] .preview-drawer .form-item,
+[data-v-8059b395] .preview-drawer .form-item > div {
+  pointer-events: none !important;
+}
+[data-v-8059b395] .preview-drawer .el-input,
+[data-v-8059b395] .preview-drawer .el-select,
+[data-v-8059b395] .preview-drawer .el-textarea {
+  pointer-events: all !important;
+  width: 250px;
+}
+[data-v-8059b395] .preview-drawer .child-form-container .el-input,
+[data-v-8059b395] .preview-drawer .child-form-container .el-select,
+[data-v-8059b395] .preview-drawer .child-form-container .el-textarea {
+  width: unset;
+}
+[data-v-8059b395] .preview-drawer .child-form-container .item:hover {
+  background-image: none;
+}
+[data-v-8059b395] .el-drawer__footer {
+  border-top: 0.0521rem solid #e0e0e0;
+  padding: 0.7813rem !important;
+}
+.formEditor-ruler-top[data-v-8059b395] {
+  background: url(https://oa-test.visfarm.com/static/img/formtop.1a4fd5a.svg)
+    no-repeat 20px bottom;
+  background-color: #f9f9f9;
+  border-top: 0.0521rem solid #e0e0e0;
+  flex: 0 0 20px;
+  height: 20px;
+}
+.formEditor.bg[data-v-8059b395] {
+  background: url(https://oa-test.visfarm.com/static/img/formleft.9ce6546.svg)
+      no-repeat 0 0,
+    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PHBhdGggZD0iTS41IDkuNWg5OW0tOTkgMTBoOTltLTk5IDEwaDk5bS05OSAxMGg5OW0tOTkgMjBoOTltLTk5IDEwaDk5bS05OSAxMGg5OW0tOTkgMTBoOTltLTkwLTkwdjEwMG0xMC0xMDB2MTAwbTEwLTEwMHYxMDBtMTAtMTAwdjEwMG0yMC0xMDB2MTAwbTEwLTEwMHYxMDBtMTAtMTAwdjEwMG0xMC0xMDB2MTAwIiBvcGFjaXR5PSIuMDQiLz48cGF0aCBkPSJNLjUgNDkuNWg5OW0tOTkgNTBoOTltLTUwLTEwMHYxMDBtNTAtMTAwdjEwMCIgb3BhY2l0eT0iLjA3Ii8+PC9nPjwvc3ZnPg==)
+      repeat 20px 0;
+  background-attachment: local;
+  box-shadow: inset 15px 10px 20px #00000008;
+  display: flex;
+  padding-left: 20px;
+}
+.content-main-container[data-v-8059b395] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content-main-container .content-main-body[data-v-8059b395] {
+  flex: 1;
+  overflow: auto;
+}
+.content-main-header[data-v-8059b395] {
+  margin: 0.5208rem;
+  text-align: right;
+}
+.content-main-header .preview-btn[data-v-8059b395] {
+  border: none;
+}
+.content-main-header .preview-btn img[data-v-8059b395] {
+  margin-right: 0.2604rem;
+  width: 0.8333rem;
+}
+.content-main-header .preview-btn[data-v-8059b395]:hover {
+  background-color: #fff;
+}

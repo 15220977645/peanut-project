@@ -1,0 +1,27 @@
+import { r as a } from "./requireImg-CLyBMj04.js";
+import { _ as s, c as o, o as r, a as t, u as c } from "./index-D6DS3gmo.js";
+const n = { class: "empty-container" },
+  _ = ["src"],
+  p = {
+    __name: "emptyData",
+    setup(m) {
+      return (l, e) => (
+        r(),
+        o("div", n, [
+          t(
+            "img",
+            {
+              src: c(a)("fullScreen/foodSafe/empty-data.svg"),
+              alt: "暂无数据"
+            },
+            null,
+            8,
+            _
+          ),
+          e[0] || (e[0] = t("span", null, "暂无内容，敬请期待", -1))
+        ])
+      );
+    }
+  },
+  u = s(p, [["__scopeId", "data-v-6fb9dcf8"]]);
+export { u as default };
