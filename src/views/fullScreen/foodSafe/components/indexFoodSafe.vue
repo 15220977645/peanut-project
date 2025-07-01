@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import HeadTitle from "./headtitle.vue";
+import HeadTitle from "./headTitle.vue";
 import EmptyData from "./emptyData.vue";
 
 const qualityList = ref([
