@@ -49,3 +49,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           keep_files: true # 保留现有文件
+permissions:
+  contents: write # 确保工作流程有写入权限
+steps:
+  - uses: actions/checkout@v4
+  - run: git push origin gh-pages
