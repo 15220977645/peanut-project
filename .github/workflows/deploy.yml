@@ -35,7 +35,7 @@ jobs:
       # 4. 处理 dist 目录内容
       - name: Prepare deployment
         run: |
-          cp dist/index.html .
+          mv dist/* .
 
           # 修改 dist 目录下的资源引用路径
           find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
