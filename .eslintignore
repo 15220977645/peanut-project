@@ -1,6 +1,5 @@
 public
 dist
-docs
 *.d.ts
 /src/assets
 package.json

@@ -122,7 +122,7 @@ onMounted(() => {
   init();
   window.addEventListener("resize", function () {
     chart.value?.resize();
-    chart.value.dispose();
+    chart.value?.dispose();
     chart.value = null;
     screenWidth.value = document.body.clientWidth;
     screenHeight.value = document.body.clientHeight;

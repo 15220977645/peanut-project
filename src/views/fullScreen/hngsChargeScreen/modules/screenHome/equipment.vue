@@ -71,7 +71,7 @@ function initChart() {
     const fullScreenDom = document.getElementById("fullScreenDom");
     if (chart[name]) chart[name].dispose();
     chart[name] = null;
-    const getElement = equipmentDom.querySelector(
+    const getElement = equipmentDom?.querySelector(
       `#equipment-${name.replace("Chart", "")}`
     ) as HTMLElement;
     if (!getElement || !fullScreenDom) return;

@@ -1,0 +1,214 @@
+import { M as d } from "./motion-Cac8VURx.js";
+import { m as w } from "./message-CSPqT3RV.js";
+import { u as _, d as R, p as B } from "./iphone-CLCZJ0yV.js";
+import {
+  d as N,
+  Z as S,
+  r as C,
+  B as T,
+  h as f,
+  g as U,
+  o as z,
+  w as l,
+  b as o,
+  u as e,
+  a as D,
+  i as g,
+  t as y,
+  a3 as F,
+  ae as I,
+  hD as $
+} from "./index-CnxsT9tm.js";
+import { u as h } from "./hooks-CcwABaZj.js";
+const E = { class: "w-full flex justify-between" },
+  P = N({
+    __name: "phone",
+    setup(M) {
+      const { t: n } = S(),
+        r = C(!1),
+        t = T({ phone: "", verifyCode: "" }),
+        p = C(),
+        { isDisabled: V, text: v } = _(),
+        b = async m => {
+          (r.value = !0),
+            m &&
+              (await m.validate((a, i) => {
+                if (a)
+                  setTimeout(() => {
+                    w(F(I("login.loginSuccess")), { type: "success" }),
+                      (r.value = !1);
+                  }, 2e3);
+                else return (r.value = !1), i;
+              }));
+        };
+      function k() {
+        _().end(), $().SET_CURRENTPAGE(0);
+      }
+      return (m, a) => {
+        const i = f("el-input"),
+          u = f("el-form-item"),
+          c = f("el-button"),
+          x = f("el-form");
+        return (
+          z(),
+          U(
+            x,
+            {
+              ref_key: "ruleFormRef",
+              ref: p,
+              model: t,
+              rules: e(B),
+              size: "large"
+            },
+            {
+              default: l(() => [
+                o(e(d), null, {
+                  default: l(() => [
+                    o(
+                      u,
+                      { prop: "phone" },
+                      {
+                        default: l(() => [
+                          o(
+                            i,
+                            {
+                              clearable: "",
+                              modelValue: t.phone,
+                              "onUpdate:modelValue":
+                                a[0] || (a[0] = s => (t.phone = s)),
+                              placeholder: e(n)("login.phone"),
+                              "prefix-icon": e(h)(e(R))
+                            },
+                            null,
+                            8,
+                            ["modelValue", "placeholder", "prefix-icon"]
+                          )
+                        ]),
+                        _: 1
+                      }
+                    )
+                  ]),
+                  _: 1
+                }),
+                o(
+                  e(d),
+                  { delay: 100 },
+                  {
+                    default: l(() => [
+                      o(
+                        u,
+                        { prop: "verifyCode" },
+                        {
+                          default: l(() => [
+                            D("div", E, [
+                              o(
+                                i,
+                                {
+                                  clearable: "",
+                                  modelValue: t.verifyCode,
+                                  "onUpdate:modelValue":
+                                    a[1] || (a[1] = s => (t.verifyCode = s)),
+                                  placeholder: e(n)("login.smsVerifyCode"),
+                                  "prefix-icon": e(h)("ri:shield-keyhole-line")
+                                },
+                                null,
+                                8,
+                                ["modelValue", "placeholder", "prefix-icon"]
+                              ),
+                              o(
+                                c,
+                                {
+                                  disabled: e(V),
+                                  class: "ml-2",
+                                  onClick:
+                                    a[2] ||
+                                    (a[2] = s => e(_)().start(p.value, "phone"))
+                                },
+                                {
+                                  default: l(() => [
+                                    g(
+                                      y(
+                                        e(v).length > 0
+                                          ? e(v) + e(n)("login.info")
+                                          : e(n)("login.getVerifyCode")
+                                      ),
+                                      1
+                                    )
+                                  ]),
+                                  _: 1
+                                },
+                                8,
+                                ["disabled"]
+                              )
+                            ])
+                          ]),
+                          _: 1
+                        }
+                      )
+                    ]),
+                    _: 1
+                  }
+                ),
+                o(
+                  e(d),
+                  { delay: 150 },
+                  {
+                    default: l(() => [
+                      o(u, null, {
+                        default: l(() => [
+                          o(
+                            c,
+                            {
+                              class: "w-full",
+                              size: "default",
+                              type: "primary",
+                              loading: r.value,
+                              onClick: a[3] || (a[3] = s => b(p.value))
+                            },
+                            {
+                              default: l(() => [g(y(e(n)("login.login")), 1)]),
+                              _: 1
+                            },
+                            8,
+                            ["loading"]
+                          )
+                        ]),
+                        _: 1
+                      })
+                    ]),
+                    _: 1
+                  }
+                ),
+                o(
+                  e(d),
+                  { delay: 200 },
+                  {
+                    default: l(() => [
+                      o(u, null, {
+                        default: l(() => [
+                          o(
+                            c,
+                            { class: "w-full", size: "default", onClick: k },
+                            {
+                              default: l(() => [g(y(e(n)("login.back")), 1)]),
+                              _: 1
+                            }
+                          )
+                        ]),
+                        _: 1
+                      })
+                    ]),
+                    _: 1
+                  }
+                )
+              ]),
+              _: 1
+            },
+            8,
+            ["model", "rules"]
+          )
+        );
+      };
+    }
+  });
+export { P as _ };

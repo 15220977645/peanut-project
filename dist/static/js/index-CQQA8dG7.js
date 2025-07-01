@@ -1,0 +1,78 @@
+import { R as c, a as m } from "./index-BlabhJWa.js";
+import {
+  d as u,
+  g as i,
+  w as t,
+  a as e,
+  b as s,
+  u as r,
+  c as _,
+  k as p,
+  F as f,
+  h,
+  o as n
+} from "./index-CnxsT9tm.js";
+import "./propTypes-D_I3dZnw.js";
+const C = { class: "flex items-center" },
+  k = { class: "flex ml-8" },
+  V = u({
+    name: "CountTo",
+    __name: "index",
+    setup(x) {
+      return (b, o) => {
+        const l = h("el-card");
+        return (
+          n(),
+          i(
+            l,
+            { shadow: "never" },
+            {
+              header: t(
+                () =>
+                  o[0] ||
+                  (o[0] = [
+                    e(
+                      "div",
+                      { class: "card-header" },
+                      [e("span", { class: "font-medium" }, "数字动画组件")],
+                      -1
+                    )
+                  ])
+              ),
+              default: t(() => [
+                e("div", C, [
+                  s(r(c), {
+                    prefix: "$",
+                    duration: 1e3,
+                    color: "#409EFF",
+                    fontSize: "2em",
+                    startVal: 1,
+                    endVal: 1e3
+                  }),
+                  e("ul", k, [
+                    (n(),
+                    _(
+                      f,
+                      null,
+                      p([1, 6, 6, 6], (d, a) =>
+                        s(
+                          r(m),
+                          { key: a, i: d, blur: a, delay: a + 1 },
+                          null,
+                          8,
+                          ["i", "blur", "delay"]
+                        )
+                      ),
+                      64
+                    ))
+                  ])
+                ])
+              ]),
+              _: 1
+            }
+          )
+        );
+      };
+    }
+  });
+export { V as default };

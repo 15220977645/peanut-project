@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main] # 只在 main 分支推送时触发
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出代码
+      - uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境（如果需要构建）
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # 3. 安装依赖并构建（示例使用 npm）
+      - name: Install and build
+        run: |
+          npm install
+          npm run build
+
+      # 4. 处理 dist 目录内容
+      - name: Prepare deployment
+        run: |
+          # 创建软链接使根目录 index.html 指向 dist/index.html
+          ln -sf dist/index.html index.html
+
+          # 修改 dist 目录下的资源引用路径
+          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
+            -exec sed -i 's|="\([^"/]\{1,\}\.\(css\|js\|png\|jpg\|svg\)\)"|="/dist/\1"|g' {} +
+
+      # 5. 部署到 GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          keep_files: true # 保留现有文件

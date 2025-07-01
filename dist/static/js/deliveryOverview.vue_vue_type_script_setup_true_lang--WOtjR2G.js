@@ -1,0 +1,30 @@
+import t from "./OverView-Btamf_LS.js";
+import {
+  d as n,
+  r as o,
+  c as r,
+  a as i,
+  b as s,
+  u as l,
+  o as u
+} from "./index-CnxsT9tm.js";
+const c = { class: "overview-container" },
+  p = n({
+    __name: "deliveryOverview",
+    setup(d) {
+      const a = o([
+        { label: "今日送达率", quantity: 20, unit: "%" },
+        { label: "今日及时送达率", quantity: 10, unit: "%" },
+        { label: "昨日送达率", quantity: 40, unit: "%" },
+        { label: "昨日及时送达率", quantity: 30, unit: "%" }
+      ]);
+      return (m, e) => (
+        u(),
+        r("div", c, [
+          e[0] || (e[0] = i("div", { class: "module-head" }, "送达概况", -1)),
+          s(t, { data: l(a) }, null, 8, ["data"])
+        ])
+      );
+    }
+  });
+export { p as _ };
