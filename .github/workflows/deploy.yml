@@ -18,11 +18,19 @@ jobs:
         with:
           node-version: 18
 
-      # 3. 安装依赖并构建（示例使用 npm）
-      - name: Install and build
+      # 3. 安装依赖并构建（示例使用 pnpm）
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
         run: |
-          npm install
-          npm run build
+          pnpm install
+
+      - name: Build project
+        run: |
+          pnpm run build
 
       # 4. 处理 dist 目录内容
       - name: Prepare deployment
