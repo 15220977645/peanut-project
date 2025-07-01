@@ -67,7 +67,7 @@ const viteConfig = ({ command, mode }: ConfigEnv): UserConfigExport => {
     },
     build: {
       sourcemap: false,
-      outDir: "dist",
+      outDir: "docs",
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 4000,
       rollupOptions: {
