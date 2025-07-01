@@ -35,8 +35,7 @@ jobs:
       # 4. 处理 dist 目录内容
       - name: Prepare deployment
         run: |
-          # 创建软链接使根目录 index.html 指向 dist/index.html
-          ln -sf dist/index.html index.html
+          cp dist/index.html .
 
           # 修改 dist 目录下的资源引用路径
           find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
