@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts" name="IntegratedTraining"></script>
 <style scoped lang="scss">
 .three-box {
   height: calc(100% - 30px);

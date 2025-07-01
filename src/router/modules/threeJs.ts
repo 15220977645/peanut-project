@@ -57,7 +57,7 @@ export default {
     },
     {
       path: "/threeJs/other/index",
-      name: "",
+      name: "Other",
       component: () => import("@/views/threeJs/other/index.vue"),
       meta: {
         title: $t("menus.comingSoon"),
