@@ -1,42 +1,55 @@
 name: Deploy to GitHub Pages
 
-# 权限配置 - 必须在jobs之前声明
 permissions:
-  contents: write # 允许写入仓库内容
-  pages: write # 允许写入Pages设置
+  contents: write # 确保工作流程有写入权限
+  pages: write
 
 on:
   push:
-    branches:
-      - main # 只在main分支推送时触发
+    branches: [main] # 只在 main 分支推送时触发
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # 1. 检出代码
+      - uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境（如果需要构建）
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          ref: main
-          fetch-depth: 0 # 获取所有历史记录和标签
+          node-version: 18
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        # 如果使用静态站点生成器，可在此添加构建步骤
-        # - name: Build
-        #   run: |
-        #     npm install
-        #     npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      # 3. 安装依赖并构建（示例使用 pnpm）
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          path: "dist/" # 上传dist目录作为发布内容
+          version: 8
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        id: deployment # 用于获取部署后的URL
+      - name: Install dependencies
+        run: |
+          pnpm install
+
+      - name: Build project
+        run: |
+          pnpm run build
+
+      # 4. 处理 dist 目录内容
+      - name: Prepare deployment
+        run: |
+          mv dist/* .
+
+          # 修改 dist 目录下的资源引用路径
+          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
+            -exec sed -i 's|="\([^"/]\{1,\}\.\(css\|js\|png\|jpg\|svg\)\)"|="/dist/\1"|g' {} +
+
+      # 5. 部署到 GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          keep_files: true # 保留现有文件
+
