@@ -2,53 +2,53 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main] # 只在 main 分支推送时触发
+    branches:
+      - main # 或者你默认的分支名，例如 master
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 允许写入内容权限
 
     steps:
-      # 1. 检出代码
-      - uses: actions/checkout@v4
-
-      # 2. 设置 Node.js 环境（如果需要构建）
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3 # 使用最新版本的 checkout
         with:
-          node-version: 18
+          persist-credentials: false
+          fetch-depth: 0 # 获取完整历史记录
 
-      # 3. 安装依赖并构建（示例使用 pnpm）
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - name: Install dependencies
+      - name: Checkout gh-pages branch
         run: |
-          pnpm install
+          git fetch origin gh-pages
+          git checkout gh-pages || git checkout -b gh-pages
 
-      - name: Build project
+      - name: Clean out existing contents
+        run: rm -rf *
+
+      - name: Copy dist files
         run: |
-          pnpm run build
+          ls dist # 确认 dist 目录存在
+          cp -r dist/* . # 复制 dist 目录下的所有文件
 
-      # 4. 处理 dist 目录内容
-      - name: Prepare deployment
+      - name: Configure Git
         run: |
-          mv dist/* .
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global core.sshCommand "ssh -o StrictHostKeyChecking=no"
 
-          # 修改 dist 目录下的资源引用路径
-          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
-            -exec sed -i 's|="\([^"/]\{1,\}\.\(css\|js\|png\|jpg\|svg\)\)"|="/dist/\1"|g' {} +
+      - name: Commit and push
+        run: |
+          git add -A
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages --force
 
-      # 5. 部署到 GitHub Pages
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: dist
-          clean: true
-
-permissions:
-  contents: write # 确保工作流程有写入权限
-
+      - name: Set GitHub Pages branch
+        run: |
+          git checkout main
+          git branch --set-upstream-to=origin/main main
+          git fetch origin
+          git branch -D gh-pages || true
+          git checkout -b gh-pages
+          git push origin gh-pages --force
+          git checkout main
