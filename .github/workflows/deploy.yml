@@ -28,8 +28,8 @@ jobs:
 
       - name: Copy dist files
         run: |
-          ls dist # 确认 dist 目录存在
-          cp -r dist/* . # 复制 dist 目录下的所有文件
+          ls ./dist # 确认 dist 目录存在
+          cp -r ./dist/* . # 复制 dist 目录下的所有文件
 
       - name: Configure Git
         run: |
