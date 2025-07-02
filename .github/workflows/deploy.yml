@@ -13,10 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 检出代码
-      - uses: actions/checkout@v4
+      # 1. 检出 main 分支代码
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0 # 获取完整历史记录
 
-      # 2. 设置 Node.js 环境（如果需要构建）
+      # 2. 设置 Node.js 环境
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -29,27 +33,25 @@ jobs:
           version: 8
 
       - name: Install dependencies
-        run: |
-          pnpm install
+        run: pnpm install
 
       - name: Build project
-        run: |
-          pnpm run build
+        run: pnpm run build
 
-      # 4. 处理 dist 目录内容
-      - name: Prepare deployment
-        run: |
-          mv dist/* .
-
-          # 修改 dist 目录下的资源引用路径
-          find dist -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) \
-            -exec sed -i 's|="\([^"/]\{1,\}\.\(css\|js\|png\|jpg\|svg\)\)"|="/dist/\1"|g' {} +
-
-      # 5. 部署到 GitHub Pages
-      - name: Deploy
+      # 4. 创建 gh-pages 分支并部署 dist 内容
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          keep_files: true # 保留现有文件
-
+          # 指定要部署的目录为 dist
+          publish_dir: ./dist
+          # 目标分支设为 gh-pages
+          publish_branch: gh-pages
+          # 创建孤儿分支，只包含最新内容
+          force_orphan: true
+          # 保留 .nojekyll 文件（如果存在）
+          keep_files: false
+          # 允许空提交
+          allow_empty_commit: true
+          # 自定义提交信息
+          commit_message: "Deploy dist from main branch"

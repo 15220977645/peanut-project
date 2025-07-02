@@ -1,9 +1,0 @@
-function s() {
-  const o = document.getElementsByClassName("animation-font");
-  Array.from(o).forEach(t => {
-    const a = t.offsetWidth,
-      n = t.getElementsByClassName("animation-content")[0];
-    n.offsetWidth > a && n.classList.add("go-animation");
-  });
-}
-export { s as h };
