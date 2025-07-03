@@ -16,6 +16,7 @@
 </template>
 
 <script setup lang="ts" name="EnvironmentMap">
+import { requireImg } from "@/utils/requireImg";
 import * as THREE from "three";
 // 导入轨道控制器
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -50,7 +51,7 @@ const initHbr = async () => {
   let hbrTexture = null;
   // 加载hdr环境图
   const rgbeLoader = new RGBELoader();
-  const texture = await rgbeLoader.loadAsync("/src/assets/three/scene1.hdr");
+  const texture = await rgbeLoader.loadAsync(requireImg("three/scene1.hdr"));
   texture.mapping = THREE.EquirectangularReflectionMapping; // 设置映射类型
   scene.hbr.background = texture; // 设置背景
   scene.hbr.environment = texture; // 设置环境贴图
@@ -143,12 +144,12 @@ const initCube = async () => {
   // 加载环境贴图
   // 图片尺寸要求：必须是2的n次方，且宽高比为1:1
   const textureCube = cubeTextureLoader.load([
-    "/src/assets/three/px.jpg",
-    "/src/assets/three/nx.jpg",
-    "/src/assets/three/py.jpg",
-    "/src/assets/three/ny.jpg",
-    "/src/assets/three/pz.jpg",
-    "/src/assets/three/nz.jpg"
+    requireImg("three/px.jpg"),
+    requireImg("three/nx.jpg"),
+    requireImg("three/py.jpg"),
+    requireImg("three/ny.jpg"),
+    requireImg("three/pz.jpg"),
+    requireImg("three/nz.jpg")
   ]);
   // 创建球体
   const sphereGeometry = new THREE.SphereGeometry(1, 50, 50); // 参数：半径、水平分段数、垂直分段数

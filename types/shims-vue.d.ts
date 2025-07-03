@@ -39,3 +39,9 @@ declare module "*.svg" {
 declare module "*.webp" {
   export default src;
 }
+declare module "*.glb" {
+  export default src;
+}
+declare module "*.gltf" {
+  export default src;
+}

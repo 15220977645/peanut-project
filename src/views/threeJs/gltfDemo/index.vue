@@ -2,6 +2,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { requireImg } from "@/utils/requireImg";
 
 const loadThree = ref(true); // 控制加载动画
 const threeBox = ref();
@@ -56,7 +57,7 @@ const init = async () => {
   // 添加茶几图片texture
   const textureLoader = new THREE.TextureLoader();
   const texture = await textureLoader.load(
-    "/src/assets/three/zhengfangti.jpeg",
+    requireImg("three/zhengfangti.jpeg"),
     async () => {
       // 设置模型大小
       texture.wrapS = THREE.RepeatWrapping; // 设置纹理重复方式
@@ -70,7 +71,7 @@ const init = async () => {
       // 设置场景模型
       // gltf路径要为绝对路径或者不含@的相对路径
       await gltfLoader.load(
-        "/src/assets/three/scene1.gltf",
+        requireImg("three/scene1.gltf"),
         function (gltf: any) {
           gltf.scene.traverse((child: any) => {
             if (child.isMesh) {
@@ -112,7 +113,7 @@ const init = async () => {
 
   let mixer = null; // 动画混合器
   // 添加机器人模型
-  await gltfLoader.load("/src/assets/three/robot.glb", function (gltf: any) {
+  await gltfLoader.load(requireImg("three/robot.glb"), function (gltf: any) {
     const model = gltf.scene;
     scene.add(model);
     // 如果模型包含动画，创建动画混合器
