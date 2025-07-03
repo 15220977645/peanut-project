@@ -30,9 +30,10 @@
 <script setup>
 import ChinaLonLat from "@/utils/chinaLonLat.ts";
 import * as echarts from "echarts";
-import "@/utils/china.js";
 import { Bus } from "./components/bus";
+import chinaJSON from "@/utils/mapJson/china-no-islands.json"; // 官方JSON地图数据
 
+echarts.registerMap("china", chinaJSON);
 const bidAmountText = ref("月中标金额");
 const monthBidData = ref([
   { type: 0, color: "#FB497C", val: "2000万以上" },
@@ -67,6 +68,7 @@ function initChart() {
   const getElement = document.getElementById("foodChina");
   if (!getElement) return;
   if (chart.value) chart.value.dispose();
+  // 注册地图
   chart.value = echarts.init(getElement);
   chart.value.setOption({
     tooltip: {

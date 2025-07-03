@@ -23,7 +23,7 @@
     >
       <img
         class="assets"
-        :src="requireImg(`fullScreen/megoFood/overview-${index + 1}.png`)"
+        :src="requireImg(`fullScreen/megoFood/overview-1.png`)"
       />
       <div class="flex-column text">
         <div class="label">{{ item.label }}</div>
@@ -40,7 +40,7 @@
 
 <script setup lang="ts">
 import { requireImg } from "@/utils/requireImg";
-
+console.log(requireImg(`fullScreen/megoFood/overview-1.png`));
 const props = defineProps(["data"]);
 </script>
 
@@ -74,7 +74,8 @@ const props = defineProps(["data"]);
     padding-top: 0.6771rem;
   }
 
-  .view-item1 {
+  .view-item1,
+  .view-item3 {
     padding-left: 0.8333rem;
   }
 }
@@ -121,6 +122,7 @@ const props = defineProps(["data"]);
 .label {
   font-size: 0.6771rem;
   color: #84a5c4;
+  white-space: nowrap;
 }
 
 .quantity {

@@ -1,10 +1,11 @@
-// export const requireImg = (imgPath: string) => {
-//   const imgSrc = `/src/assets/${imgPath}`;
-//   return new URL(imgSrc, import.meta.url).href;
-// };
 // @ts-ignore
 const images = import.meta.glob("/src/assets/*", { eager: true, as: "url" });
-
+// @ts-ignore
+const folderImages = import.meta.glob("/src/assets/**/**/*", {
+  eager: true,
+  as: "url"
+});
+const allImages = { ...images, ...folderImages };
 export const requireImg = (imgPath: string) => {
-  return images[`/src/assets/${imgPath}`];
+  return allImages[`/src/assets/${imgPath}`];
 };

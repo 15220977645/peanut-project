@@ -271,7 +271,9 @@ $img: "~@/icons/count";
 
       .middle {
         box-sizing: border-box;
+        display: flex;
         flex-basis: 48%;
+        flex-direction: column;
         width: 48%;
         min-width: 48%;
         padding-left: 3rem;

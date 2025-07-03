@@ -10,7 +10,6 @@ import {
   ref,
   watch
 } from "vue";
-import "@/utils/china.js";
 import redIcon from "@/assets/fullScreen/hngsChargeScreen/map-red-icon.svg";
 import yellowIcon from "@/assets/fullScreen/hngsChargeScreen/map-yellow-icon.png";
 import blueIcon from "@/assets/fullScreen/hngsChargeScreen/map-blue-icon.png";

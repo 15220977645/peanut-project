@@ -20,7 +20,6 @@
 <script setup>
 import { requireImg } from "@/utils/requireImg";
 import * as echarts from "echarts";
-import "@/utils/china.js";
 import chinaLonLat from "@/utils/chinaLonLat.ts";
 import branchIcon from "@/assets/fullScreen/foodSafe/ChinaMap-branch.png";
 
@@ -206,7 +205,8 @@ function handlePointProvince() {
   // 调用高德批量逆地理编码Api
 }
 /* 初始化图形 */
-function initChart(mapJson) {
+async function initChart(mapJson) {
+  await nextTick();
   const getElement = document.getElementById("crmChina");
   if (!getElement) return;
   if (chart.value) chart.value.dispose();
@@ -388,8 +388,8 @@ onMounted(() => {
 .chinaMap {
   position: relative;
   display: flex;
+  flex: 1;
   flex-wrap: nowrap;
-  height: 100%;
   margin-bottom: 1.5625rem;
 
   .distribution {
