@@ -530,10 +530,7 @@ onBeforeUnmount(() => {
       title="全屏"
       @click="fullScreenStatue = true"
     >
-      <img
-        :src="'src/assets/fullScreen/hngsChargeScreen/fullscreen.svg'"
-        alt=""
-      />
+      <img src="src/assets/fullScreen/hngsChargeScreen/fullscreen.svg" alt="" />
     </div>
     <div class="legend" @click="clickLegend">
       <div v-for="(item, i) in ['org', 'station']" :key="i" class="sel-item">

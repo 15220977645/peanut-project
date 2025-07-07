@@ -634,7 +634,7 @@ onBeforeUnmount(() => {
           </div>
           <div title="关闭" @click="dialogPlatform = false">
             <img
-              src="@/assets/fullScreen/hngsChargeScreen/close.svg"
+              src="src/assets/fullScreen/hngsChargeScreen/close.svg"
               class="close-icon"
             />
           </div>
