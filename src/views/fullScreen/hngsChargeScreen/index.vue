@@ -624,7 +624,9 @@ onBeforeUnmount(() => {
             <img
               :src="
                 !screenDialogState
-                  ? requireImg('fullScreen/hngsChargeScreen/fullscreen.svg')
+                  ? requireImg(
+                      'fullScreen/hngsChargeScreen/fullscreen-black.svg'
+                    )
                   : requireImg(
                       'fullScreen/hngsChargeScreen/exit-fullscreen.svg'
                     )
@@ -634,7 +636,7 @@ onBeforeUnmount(() => {
           </div>
           <div title="关闭" @click="dialogPlatform = false">
             <img
-              src="src/assets/fullScreen/hngsChargeScreen/close.svg"
+              src="@/assets/fullScreen/hngsChargeScreen/close.svg?url"
               class="close-icon"
             />
           </div>
@@ -749,6 +751,8 @@ onBeforeUnmount(() => {
 
       .close-icon,
       .fullscreen-icon {
+        width: 1.5625rem;
+        height: 1.5625rem;
         padding: 0.2604rem;
         margin-left: 0.7813rem;
         font-size: 1.4063rem;

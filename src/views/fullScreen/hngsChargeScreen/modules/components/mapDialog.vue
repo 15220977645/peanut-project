@@ -58,7 +58,10 @@ function closeDialog() {
     >
       <div ref="mapDialogRef" class="dialog-map-content">
         <div class="close-icon" title="关闭全屏" @click="closeDialog">
-          <img src="/src/assets/fullScreen/hngsChargeScreen/close.svg" alt="" />
+          <img
+            src="/src/assets/fullScreen/hngsChargeScreen/close.svg?url"
+            alt=""
+          />
         </div>
         <Map
           :selTypeChn="''"

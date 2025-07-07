@@ -36,7 +36,7 @@ onMounted(() => {
     </div>
     <img
       class="r-img"
-      src="@/assets/fullScreen/hngsChargeScreen/title-r-icon.svg"
+      src="@/assets/fullScreen/hngsChargeScreen/title-r-icon.svg?url"
       alt=""
     />
   </div>

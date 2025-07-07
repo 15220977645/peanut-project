@@ -531,7 +531,7 @@ onBeforeUnmount(() => {
       @click="fullScreenStatue = true"
     >
       <img
-        src="/src/assets/fullScreen/hngsChargeScreen/fullscreen.svg"
+        src="@/assets/fullScreen/hngsChargeScreen/fullscreen.svg?url"
         alt=""
       />
     </div>

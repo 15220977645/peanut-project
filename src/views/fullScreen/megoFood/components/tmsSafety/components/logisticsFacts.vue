@@ -47,7 +47,7 @@
           class="line-echart"
         />
         <div v-else class="empty-box">
-          <img src="/src/assets/fullScreen/megoFood/empty.svg" alt="" />
+          <img src="/src/assets/fullScreen/megoFood/empty.svg?url" alt="" />
           <span>暂无数据</span>
         </div>
       </div>

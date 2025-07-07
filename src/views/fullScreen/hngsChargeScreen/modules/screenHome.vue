@@ -9,6 +9,7 @@ import Order from "./screenHome/order.vue";
 import BilateralUtilizeTable from "./screenHome/bilateralUtilizeTable.vue";
 import Map from "./components/map.vue";
 import { handleSlideFont } from "./components/commonFun";
+import { requireImg } from "@/utils/requireImg";
 
 const pointData: any = inject("pointData");
 
@@ -102,9 +103,9 @@ function pointInfoFactory(params: any) {
   });
   const monitorDom = `<div class="info-item map-monitor-info" title="点击打开监控视频">
       实时视频监控：
-      <img src="${"fullScreen/hngsChargeScreen/map-monitor-icon.svg"}" width="${
-    (document.body.clientWidth / 1920) * 20
-  }" alt="" />
+      <img src="${requireImg(
+        "fullScreen/hngsChargeScreen/map-monitor-icon.svg"
+      )}" width="${(document.body.clientWidth / 1920) * 20}" alt="" />
     </div>`;
   return `<div class="point-info">
     <div class="info-station-name" title="跳转至该站详情">${params.name}</div>
