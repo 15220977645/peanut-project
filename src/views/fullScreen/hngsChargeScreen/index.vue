@@ -588,7 +588,7 @@ onBeforeUnmount(() => {
         "
         @click="mapFullScreen"
       >
-        湖南高速新能源充电数据大屏
+        湖南高速新能源充电
       </div>
       <div class="time">
         {{ date }}
