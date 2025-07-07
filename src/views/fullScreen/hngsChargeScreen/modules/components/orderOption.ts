@@ -1,4 +1,5 @@
 import * as echarts from "echarts";
+import { requireImg } from "@/utils/requireImg";
 
 /* 输出适配宽度 */
 function getWidth(width: number) {
@@ -113,7 +114,9 @@ function getOptions(data: any) {
         type: "line",
         data: yData,
         symbolSize: getWidth(18),
-        symbol: `image://${"src/assets/fullScreen/hngsChargeScreen/order-line-icon.svg"}`,
+        symbol: `image://${requireImg(
+          "fullScreen/hngsChargeScreen/order-line-icon.svg"
+        )}`,
         itemStyle: {
           color: "#3A6CFF",
           barBorderRadius: 0,

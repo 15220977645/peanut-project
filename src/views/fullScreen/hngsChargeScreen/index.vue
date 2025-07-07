@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, provide, ref, watch } from "vue";
 import * as screenData from "./modules/screenData";
 import ScreenHome from "./modules/screenHome.vue";
+import { requireImg } from "@/utils/requireImg";
 
 const content = ref();
 const fullScreenDom = ref();
@@ -623,8 +624,10 @@ onBeforeUnmount(() => {
             <img
               :src="
                 !screenDialogState
-                  ? '@/assets/fullScreen/hngsChargeScreen/fullscreen.svg'
-                  : '@/assets/fullScreen/hngsChargeScreen/exit-fullscreen.svg'
+                  ? requireImg('fullScreen/hngsChargeScreen/fullscreen.svg')
+                  : requireImg(
+                      'fullScreen/hngsChargeScreen/exit-fullscreen.svg'
+                    )
               "
               class="fullscreen-icon"
             />

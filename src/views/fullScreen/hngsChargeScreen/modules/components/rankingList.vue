@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { requireImg } from "@/utils/requireImg";
+
 interface listType {
   rising: any;
   unit: string;
@@ -66,8 +68,8 @@ const barWidth = (num: any) => {
           <img
             :src="
               item.rising >= 0
-                ? 'src/assets/fullScreen/hngsChargeScreen/fullscreen.svg'
-                : 'src/assets/fullScreen/hngsChargeScreen/ranking-down.svg'
+                ? requireImg('fullScreen/hngsChargeScreen/ranking-up.svg')
+                : requireImg('fullScreen/hngsChargeScreen/ranking-down.svg')
             "
             class="ranking-icon"
           />
