@@ -469,10 +469,8 @@ const handleLatheGeometry = async () => {
   mesh.position.set(-6, 7, 0);
   const box3 = new THREE.Box3();
   box3.expandByObject(mesh);
-  console.log("青花瓷花瓶box3", box3);
   const scale = new THREE.Vector3();
   box3.getSize(scale);
-  console.log("青花瓷花瓶scale", scale);
   scene.add(mesh);
 };
 

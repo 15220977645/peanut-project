@@ -45,3 +45,6 @@ declare module "*.glb" {
 declare module "*.gltf" {
   export default src;
 }
+declare module "*.fbx" {
+  export default src;
+}
