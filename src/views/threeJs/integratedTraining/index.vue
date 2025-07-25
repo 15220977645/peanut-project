@@ -1,11 +1,28 @@
-<!-- 技能实践要素：下雨下雪、点击模型、模型更新操作面板、模型动画、模型信息标注、阴影、光边 -->
+<!--
+ 技能实践要素：
+ 下雨下雪✔
+ 点击模型
+ 模型更新操作面板
+ 模型动画
+ 模型信息标注
+ 阴影
+ 光边
+ -->
 <template>
-  <div
-    ref="threeBox"
-    id="three-box"
-    v-loading="loadThree"
-    class="three-box"
-  ></div>
+  <div ref="container" class="container">
+    <div class="screen-box">
+      <div class="head">
+        <div class="title">综合训练</div>
+        <div class="date-time">{{ nowTime }}</div>
+      </div>
+    </div>
+    <div
+      ref="threeBox"
+      id="three-box"
+      v-loading="loadThree"
+      class="three-box"
+    ></div>
+  </div>
 </template>
 
 <script setup lang="ts" name="IntegratedTraining">
@@ -16,6 +33,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const threeBox = ref();
 const loadThree = ref(false);
+const nowTime = ref("");
 let scene = null;
 let camera = null;
 let renderer = null;
@@ -26,9 +44,27 @@ let rainGroup = new THREE.Group();
 let treeGroup = new THREE.Group();
 const gltfLoader = new GLTFLoader();
 
+/* 动态时间 */
+const getNowTime = () => {
+  // 添0
+  const add0 = (num: number) => {
+    return num < 10 ? "0" + num : num;
+  };
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  nowTime.value = `${year}年${add0(month)}月${add0(day)}日 ${add0(
+    hours
+  )}:${add0(minutes)}:${add0(seconds)}`;
+};
+
 /* 模型渲染 */
 const handleModelRender = async () => {
-  renderRaining();
+  // renderRaining();
   renderCar();
   renderFloor();
   renderCarPlace();
@@ -63,12 +99,12 @@ const renderMountTree = async () => {
         requireImg("three/mount.gltf"),
         gltf => {
           gltf.scene.traverse(child => {
-            if (child instanceof THREE.Mesh) {
+            if (child.isMesh) {
               child.material.map = mountTexture;
               child.material.needsUpdate = true;
             }
           });
-          gltf.scene.position.set(0, 0, -450);
+          gltf.scene.position.set(0, -8, -450);
           gltf.scene.scale.set(150, 70, 50);
           scene.add(gltf.scene);
         },
@@ -230,7 +266,7 @@ const onResize = () => {
 };
 
 /* 画板初始化 */
-const init = async () => {
+const initThree = async () => {
   // 创建场景
   scene = new THREE.Scene();
 
@@ -239,9 +275,10 @@ const init = async () => {
   camera.position.set(0, 15, 30);
 
   // 添加光照
-  const ambientLight = new THREE.AmbientLight("#fff");
-  scene.add(ambientLight);
-
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+  directionalLight.castShadow = true;
+  directionalLight.position.set(0, 50, 40);
+  scene.add(directionalLight);
   // 创建向量
   const direction = new THREE.Vector3(1, 1, 1);
   direction.normalize(); // 归一化向量
@@ -273,7 +310,8 @@ const init = async () => {
 onMounted(() => {
   width = threeBox.value.clientWidth;
   height = threeBox.value.clientHeight;
-  init();
+  initThree();
+  setInterval(getNowTime, 1000);
   window.addEventListener("resize", onResize);
 });
 onBeforeUnmount(() => {
@@ -281,8 +319,59 @@ onBeforeUnmount(() => {
 });
 </script>
 <style scoped lang="scss">
-.three-box {
+.container {
+  position: relative;
+  max-width: calc(100% - 30px);
   height: calc(100% - 30px);
   margin: 15px;
+
+  .screen-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px;
+    pointer-events: none;
+    box-shadow: inset 0 0 30px 30px rgb(0 0 0 / 50%);
+
+    .head {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 0.5208rem;
+      font-size: 1.6667rem;
+      color: #f8e1c3;
+
+      .title {
+        position: absolute;
+        top: 0.7813rem;
+        left: 50%;
+        font-weight: bold;
+        color: transparent;
+        background: linear-gradient(
+          to bottom,
+          #fff 0%,
+          #a26631 40%,
+          #a24d02 100%
+        );
+        background-clip: text;
+        transform: translateX(-50%);
+      }
+
+      .date-time {
+        font-size: 1.25rem;
+        transform: translateY(0.2vh);
+      }
+    }
+  }
+}
+
+.three-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 </style>

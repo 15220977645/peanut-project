@@ -44,6 +44,7 @@ const init = async () => {
   // 添加光照
   const ambientLight = new THREE.AmbientLight("#fff");
   scene.add(ambientLight);
+  // 聚光源
   const pointLight = new THREE.PointLight("#FFCC99", 10);
   pointLight.decay = 2; //设置光源不随距离衰减
   scene.add(pointLight); //点光源添加到场景中
