@@ -20,6 +20,7 @@
 <script setup>
 import { requireImg } from "@/utils/requireImg";
 import * as echarts from "echarts";
+import "@/utils/china.js";
 import chinaLonLat from "@/utils/chinaLonLat.ts";
 import branchIcon from "@/assets/fullScreen/foodSafe/ChinaMap-branch.png";
 
@@ -317,7 +318,7 @@ async function initChart(mapJson) {
       item => item.properties.name.indexOf(param.name) > -1
     );
     if (cityObj) adcode = cityObj.properties.adcode;
-    if (cityObj.properties.level !== "province") {
+    if (!["province", "city"].includes(cityObj.properties.level)) {
       const index = -1;
       if (index < 0) adcode = 100000;
       else return;
@@ -455,8 +456,8 @@ onMounted(() => {
 
   .islands {
     position: absolute;
-    bottom: 3%;
-    left: calc(80% + 5vh);
+    top: 75%;
+    right: 8%;
     width: 3.2813rem;
   }
 }

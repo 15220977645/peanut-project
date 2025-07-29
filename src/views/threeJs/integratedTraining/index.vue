@@ -1,12 +1,12 @@
 <!--
  技能实践要素：
  下雨下雪✔
+ 阴影✔
+ 光边
  点击模型
  模型更新操作面板
  模型动画
  模型信息标注
- 阴影
- 光边
  -->
 <template>
   <div ref="container" class="container">
@@ -21,6 +21,7 @@
       id="three-box"
       v-loading="loadThree"
       class="three-box"
+      @click="handleRaycaster"
     ></div>
   </div>
 </template>
@@ -32,8 +33,10 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const threeBox = ref();
-const loadThree = ref(false);
+const loadThree = ref(true);
 const nowTime = ref("");
+
+let models = [];
 let scene = null;
 let camera = null;
 let renderer = null;
@@ -43,6 +46,23 @@ let carSignGroup = new THREE.Group();
 let rainGroup = new THREE.Group();
 let treeGroup = new THREE.Group();
 const gltfLoader = new GLTFLoader();
+
+/* 射线拾取 */
+const handleRaycaster = e => {
+  const px = e.offsetX;
+  const py = e.offsetY;
+  //屏幕坐标转标准设备坐标
+  const x = (px / window.innerWidth) * 2 - 1;
+  const y = -(py / window.innerHeight) * 2 + 1;
+  const raycaster = new THREE.Raycaster();
+  //.setFromCamera()在点击位置生成raycaster的射线ray
+  raycaster.setFromCamera(new THREE.Vector2(x, y), camera);
+  // 射线交叉计算拾取模型
+  const intersects = raycaster.intersectObjects(models);
+  if (intersects.length > 0) {
+    console.log("intersects", intersects);
+  }
+};
 
 /* 动态时间 */
 const getNowTime = () => {
@@ -64,11 +84,14 @@ const getNowTime = () => {
 
 /* 模型渲染 */
 const handleModelRender = async () => {
-  // renderRaining();
-  renderCar();
-  renderFloor();
-  renderCarPlace();
-  renderMountTree();
+  await renderFloor();
+  await renderMountTree();
+  // await renderRaining();
+  await renderCar();
+  await renderCarPlace();
+  setTimeout(() => {
+    loadThree.value = false; // 关闭加载动画
+  }, 500);
 };
 
 /* 车 */
@@ -78,7 +101,14 @@ const renderCar = async () => {
     gltf => {
       gltf.scene.position.set(30, 0, -10);
       gltf.scene.scale.set(1.5, 1.5, 1.5);
+      gltf.scene.name = "car";
+      gltf.scene.traverse(child => {
+        if (child.isMesh) {
+          child.ancestors = gltf.scene;
+        }
+      });
       scene.add(gltf.scene);
+      models.push(gltf.scene);
     },
     undefined,
     function (err) {
@@ -98,15 +128,18 @@ const renderMountTree = async () => {
       await gltfLoader.load(
         requireImg("three/mount.gltf"),
         gltf => {
+          gltf.scene.name = "mount";
           gltf.scene.traverse(child => {
             if (child.isMesh) {
               child.material.map = mountTexture;
               child.material.needsUpdate = true;
+              child.ancestors = gltf.scene;
             }
           });
           gltf.scene.position.set(0, -8, -450);
           gltf.scene.scale.set(150, 70, 50);
           scene.add(gltf.scene);
+          models.push(gltf.scene);
         },
         undefined,
         function (err) {
@@ -124,6 +157,7 @@ const renderMountTree = async () => {
         const clonedModel = new THREE.Group();
         model.traverse(function (child) {
           if (child.isMesh) {
+            child.ancestors = model;
             const clonedMesh = child.clone();
             clonedModel.add(clonedMesh);
           }
@@ -139,11 +173,12 @@ const renderMountTree = async () => {
         if (i === 3) clonedModel.scale.set(2.5, 2.5, 2.5);
         treeGroup.add(clonedModel);
       }
-      console.log("treeGroup", treeGroup);
+      treeGroup.name = "treesGroup";
       treeGroup.position.set(-50, -0.9, -220);
       treeGroup.rotation.x = Math.PI * -0.5;
       treeGroup.scale.set(2, 2, 2);
       scene.add(treeGroup);
+      models.push(treeGroup);
     },
     undefined,
     function (err) {
@@ -222,9 +257,11 @@ const renderCarPlace = async () => {
   carSignGroup.add(placeSign2);
   carSignGroup.add(placeSign3);
   carSignGroup.add(placeSign4);
+  carSignGroup.name = "carSignGroup";
   carSignGroup.rotation.set(Math.PI * -0.5, 0, Math.PI * 1.25);
   carSignGroup.position.set(-10, 0.2, 0);
   scene.add(carSignGroup);
+  models.push(carSignGroup);
 };
 
 /* 建立地板 */
@@ -298,7 +335,6 @@ const initThree = async () => {
   controls.minDistance = 5;
   controls.maxDistance = 100;
   // 设置最小缩放
-  loadThree.value = false; // 关闭加载动画
   // 渲染循环
   const animate = () => {
     requestAnimationFrame(animate);

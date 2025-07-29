@@ -30,10 +30,10 @@
 <script setup>
 import ChinaLonLat from "@/utils/chinaLonLat.ts";
 import * as echarts from "echarts";
+import "@/utils/china.js";
 import { Bus } from "./components/bus";
 import chinaJSON from "@/utils/mapJson/china-no-islands.json"; // 官方JSON地图数据
 
-echarts.registerMap("china", chinaJSON);
 const bidAmountText = ref("月中标金额");
 const monthBidData = ref([
   { type: 0, color: "#FB497C", val: "2000万以上" },
@@ -68,6 +68,7 @@ function initChart() {
   const getElement = document.getElementById("foodChina");
   if (!getElement) return;
   if (chart.value) chart.value.dispose();
+  echarts.registerMap("china", chinaJSON);
   // 注册地图
   chart.value = echarts.init(getElement);
   chart.value.setOption({
@@ -244,12 +245,12 @@ onMounted(() => {
 <style lang="scss" scoped>
 .chinaMap {
   position: relative;
-  height: 100%;
+  flex: 1;
   padding-top: 1.0417rem;
 
   .bid-money_block {
     position: absolute;
-    bottom: 0;
+    bottom: 11%;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -290,19 +291,19 @@ onMounted(() => {
 
   .map-lamp {
     position: absolute;
-    bottom: -13%;
+    bottom: -8%;
     left: 50%;
     z-index: -1;
     width: 42.9167rem;
     height: 25rem;
-    transform: translateX(-44%);
+    transform: translateX(-50%);
   }
 
   /* width / height = 7 / 10 */
   .islands {
     position: absolute;
+    right: 18%;
     bottom: 18%;
-    left: 72%;
     width: 3.6458rem;
     height: 5.2083rem;
   }
